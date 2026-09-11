@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title></title>
+<!-- CSS -->
+<link rel="stylesheet" href="/xe/common/css/xe.min.css?20240102184152" />
+<link rel="stylesheet" href="/xe/common/js/plugins/ui/jquery-ui.min.css?20240102184152" />
+<link rel="stylesheet" href="/xe/modules/message/skins/xedition/css/message.css?20240102184526" />
+<!-- JS -->
+<script>
+var current_url = "http://cyeng.iptime.org/xe/?module=file&act=procFileDownload&file_srl=10395&sid=9b151e8053838976b51afb3ad6649a2b&module_srl=157";
+var request_uri = "http://cyeng.iptime.org/xe/";
+var current_mid = "";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "http://cyeng.iptime.org/xe/";
+</script>
+<!--[if lt IE 9]><script src="/xe/common/js/jquery-1.x.min.js?20240102184152"></script>
+<![endif]--><!--[if gte IE 9]><!--><script src="/xe/common/js/jquery.min.js?20240102184152"></script>
+<!--<![endif]--><script src="/xe/common/js/x.min.js?20240102184153"></script>
+<script src="/xe/common/js/xe.min.js?20240102184153"></script>
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="/xe/files/attach/xeicon/favicon.ico" />
+<script>
+						if(!captchaTargetAct) {var captchaTargetAct = [];}
+						captchaTargetAct.push("procMemberFindAccount","procMemberResendAuthMail","procMemberInsert");
+						</script>
+<meta name="viewport" content="width=1240">
+<link rel="canonical" href="http://cyeng.iptime.org/xe/index.php?module=file&act=procFileDownload&file_srl=10395&sid=9b151e8053838976b51afb3ad6649a2b&module_srl=157" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://cyeng.iptime.org/xe/index.php?module=file&act=procFileDownload&file_srl=10395&sid=9b151e8053838976b51afb3ad6649a2b&module_srl=157" /><script>
+//<![CDATA[
+xe.current_lang = "ko";
+xe.cmd_find = "찾기";
+xe.cmd_cancel = "취소";
+xe.cmd_confirm = "확인";
+xe.msg_no_root = "루트는 선택 할 수 없습니다.";
+xe.msg_no_shortcut = "바로가기는 선택 할 수 없습니다.";
+xe.msg_select_menu = "대상 메뉴 선택";
+//]]>
+</script>
+</head>
+<body>
+<div id="access">
+	<div class="login-header">
+		<p>OOPS!</p>
+		<h1>다운로드할 수 있는 권한이 없습니다.</h1>
+	</div>
+	<div class="login-body">
+		<p><a href="/xe/index.php?act=dispMemberLoginForm">로그인</a></p>
+	</div>
+	<div class="login-footer">
+		<a href="/xe/index.php?act=dispMemberFindAccount">ID/PW 찾기</a>
+		<span class="bar">|</span>
+		<a href="/xe/index.php?act=dispMemberSignUpForm">회원가입</a>
+	</div>
+</div>
+<!-- ETC -->
+<div class="wfsr"></div>
+<script src="/xe/addons/captcha/captcha.min.js?20240102184150"></script><script src="/xe/addons/autolink/autolink.js?20240102184150"></script><script src="/xe/common/js/plugins/ui/jquery-ui.min.js?20240102184152"></script><script src="/xe/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20240102184152"></script><script src="/xe/addons/resize_image/js/resize_image.min.js?20240102184151"></script></body>
+</html>

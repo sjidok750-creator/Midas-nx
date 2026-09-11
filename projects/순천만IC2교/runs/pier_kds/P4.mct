@@ -1,0 +1,153 @@
+;---------------------------------------------------------------------------
+;  MIDAS CIVIL NX Text(MCT) File.
+;  교각 P4 프레임 모델 (순천만IC2교)
+;  X 교축, Y 교축직각(G1 +), Z 상향, 원점 기초상면
+;  정정 구조: 단면력은 강성 무관
+;---------------------------------------------------------------------------
+
+*VERSION
+   9.5.5
+
+*UNIT    ; Unit System
+   KN   , M, KCAL, C
+
+*STRUCTYPE    ; Structure Type
+     0, 1, 1, NO, YES, 9.806, 0, NO, NO, NO
+
+*NODE    ; Nodes
+     1, 0, 0, 0
+     2, 0, 0, 6.25
+     3, 0, 0, 12.5
+     4, 0, 0, 15
+     5, 0, 0, 17.5
+     6, 0, 0, 18.586
+     7, 0, 2.135, 18.586
+     8, 0, -2.135, 18.586
+
+*ELEMENT    ; Elements
+     1, BEAM  ,    1,     1,     1,     2,     0,     0
+     2, BEAM  ,    1,     1,     2,     3,     0,     0
+     3, BEAM  ,    1,     2,     3,     4,     0,     0
+     4, BEAM  ,    1,     2,     4,     5,     0,     0
+     5, BEAM  ,    1,     3,     5,     6,     0,     0
+     6, BEAM  ,    1,     4,     6,     7,     0,     0
+     7, BEAM  ,    1,     4,     6,     8,     0,     0
+
+*MATERIAL    ; Material
+    1, CONC , C24               , 0, 0, , C, NO, 0.05, 1, KSCE-LSD15(RC),            , C24           , NO, 2.4800e+07
+
+*SECTION    ; Section
+    1, DBUSER    , COL_3.0x2.5       , CC, 0, 0, 0, 0, 0, 0, YES, NO, SB , 2, 2.5, 3, 0, 0, 0, 0, 0, 0, 0, 0
+    2, DBUSER    , COP_STEM          , CC, 0, 0, 0, 0, 0, 0, YES, NO, SB , 2, 2.5, 4.2, 0, 0, 0, 0, 0, 0, 0, 0
+    3, DBUSER    , COP_HEAD          , CC, 0, 0, 0, 0, 0, 0, YES, NO, SB , 2, 2.5, 6.5, 0, 0, 0, 0, 0, 0, 0, 0
+    4, DBUSER    , COP_ARM           , CC, 0, 0, 0, 0, 0, 0, YES, NO, SB , 2, 2.5, 1.6, 0, 0, 0, 0, 0, 0, 0, 0
+
+*STLDCASE    ; Static Load Cases
+   DEAD      , D , 
+   RD        , D , 
+   RLmax     , D , 
+   RLmin     , D , 
+   RL_G1     , D , 
+   RL_G2     , D , 
+   W         , W , 
+   WL        , W , 
+   CF        , CF , 
+   LF        , L , 
+   TP        , T , 
+   FR        , D , 
+   EQX       , L , 
+   EQY       , L , 
+
+*USE-STLD, DEAD
+*SELFWEIGHT    ; Self Weight
+0, 0, -1, 
+
+*USE-STLD, RD
+*CONLOAD    ; Nodal Loads
+     7, 0, 0, -3485, 0, 0, 0, 
+     8, 0, 0, -3392.1, 0, 0, 0, 
+
+*USE-STLD, RLmax
+*CONLOAD    ; Nodal Loads
+     7, 0, 0, -930.6, 0, 0, 0, 
+     8, 0, 0, -923.3, 0, 0, 0, 
+
+*USE-STLD, RLmin
+*CONLOAD    ; Nodal Loads
+     7, 0, 0, 141.4, 0, 0, 0, 
+     8, 0, 0, 159.5, 0, 0, 0, 
+
+*USE-STLD, RL_G1
+*CONLOAD    ; Nodal Loads
+     7, 0, 0, -863.7, 0, 0, 0, 
+     8, 0, 0, -67, 0, 0, 0, 
+
+*USE-STLD, RL_G2
+*CONLOAD    ; Nodal Loads
+     7, 0, 0, -66.8, 0, 0, 0, 
+     8, 0, 0, -856.3, 0, 0, 0, 
+
+*USE-STLD, W
+*CONLOAD    ; Nodal Loads
+     7, 0, -280.05, 0, -548.898, 0, 0, 
+     8, 0, -280.05, 0, -548.898, 0, 0, 
+
+*USE-STLD, W
+*BEAMLOAD    ; Element Beam Loads
+  1, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, -7.5000, 1, -7.5000, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  2, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, -7.5000, 1, -7.5000, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  3, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, -7.5000, 1, -7.5000, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  4, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, -7.5000, 1, -7.5000, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  5, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, -7.5000, 1, -7.5000, 0, 0, 0, 0, , NO, 0, 0, NO, 
+
+*USE-STLD, WL
+*CONLOAD    ; Nodal Loads
+     7, 0, -38.9, 0, -171.16, 0, 0, 
+     8, 0, -38.9, 0, -171.16, 0, 0, 
+
+*USE-STLD, CF
+*CONLOAD    ; Nodal Loads
+     7, 0, -21.65, 0, -95.26, 0, 0, 
+     8, 0, -21.65, 0, -95.26, 0, 0, 
+
+*USE-STLD, LF
+*CONLOAD    ; Nodal Loads
+
+*USE-STLD, TP
+*CONLOAD    ; Nodal Loads
+
+*USE-STLD, FR
+*CONLOAD    ; Nodal Loads
+     7, 171.928, 0, 0, 0, 0, 0, 
+     8, 171.928, 0, 0, 0, 0, 0, 
+
+*USE-STLD, EQX
+*CONLOAD    ; Nodal Loads
+     7, 811.601, 0, 0, 0, 0, 0, 
+     8, 811.601, 0, 0, 0, 0, 0, 
+
+*USE-STLD, EQX
+*BEAMLOAD    ; Element Beam Loads
+  1, BEAM   , UNILOAD, GX, NO , NO, aDir[1], , , , 0, 43.3705, 1, 43.3705, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  2, BEAM   , UNILOAD, GX, NO , NO, aDir[1], , , , 0, 43.3705, 1, 43.3705, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  3, BEAM   , UNILOAD, GX, NO , NO, aDir[1], , , , 0, 50.4255, 1, 50.4255, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  4, BEAM   , UNILOAD, GX, NO , NO, aDir[1], , , , 0, 50.4255, 1, 50.4255, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  5, BEAM   , UNILOAD, GX, NO , NO, aDir[1], , , , 0, 50.4255, 1, 50.4255, 0, 0, 0, 0, , NO, 0, 0, NO, 
+
+*USE-STLD, EQY
+*CONLOAD    ; Nodal Loads
+     7, 0, 916.495, 0, 0, 0, 0, 
+     8, 0, 916.495, 0, 0, 0, 0, 
+
+*USE-STLD, EQY
+*BEAMLOAD    ; Element Beam Loads
+  1, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, 48.9759, 1, 48.9759, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  2, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, 48.9759, 1, 48.9759, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  3, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, 56.9427, 1, 56.9427, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  4, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, 56.9427, 1, 56.9427, 0, 0, 0, 0, , NO, 0, 0, NO, 
+  5, BEAM   , UNILOAD, GY, NO , NO, aDir[1], , , , 0, 56.9427, 1, 56.9427, 0, 0, 0, 0, , NO, 0, 0, NO, 
+
+*CONSTRAINT    ; Supports
+   1, 111111, 
+
+*ENDDATA

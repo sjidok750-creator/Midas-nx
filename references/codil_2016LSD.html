@@ -1,0 +1,1429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+ 	<title>도로교 설계기준(한계상태설계법), 2016 : 일반교량편 - 건설공사기준 건설기술정보시스템 CODIL</title>
+
+
+<!-- <meta name="viewport" content="width=1260"> -->
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="author" content="국토교통부" />
+<meta name="subject" content="시설물분류 : 운송 교통시설 &gt; 교량시설 &gt; 도로교 / 공종분류 : 토목공종 &gt; 교량공사" />
+
+<link href="/css/egovframework/common.css;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" rel="stylesheet" type="text/css" media="all"></link>
+<link href="/css/egovframework/layout.css;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" rel="stylesheet" type="text/css" media="all"></link>
+<link href="/css/egovframework/content.css;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" rel="stylesheet" type="text/css" media="all"></link>
+<link href="/css/egovframework/sub_layout.css;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" rel="stylesheet" type="text/css" media="all"></link>
+<script type="text/javascript" src="/js/egovframework/jquery-1.9.1.min.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+<script type="text/javascript" src="/js/egovframework/bowser.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+<!--  JSON 객체 사용 -->
+<script type="text/javascript" src="/js/JSON/json2.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+<script type="text/javascript" src="/js/JSON/paging.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+
+<style>
+#mask {  
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:10000;  
+  background:url("/images/egovframework/com/codil/bg/loding.gif;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1")  no-repeat 50% 50%;
+  background-color:#ffffff;  
+  display:none;  
+}
+</style>
+
+<script type="text/javascript">
+/**
+ * 로딩 fade 처리
+ */
+function wrapWindowByMask(){
+    //화면의 높이와 너비를 구한다.
+    var maskHeight = $(document).height();  
+    var maskWidth = $(window).width();  
+    //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+    $('#mask').css({'width':maskWidth,'height':maskHeight});  
+
+    //애니메이션 효과
+    $('#mask').fadeIn(1000);      
+    $('#mask').fadeTo("fast",0.7);    
+}
+
+function fn_login(){
+	alert("로그인 하시면 원문을 저장할 수 있습니다.");
+}
+
+/**
+ * 원문저장
+ */
+function fn_download(metacode){
+	
+	// var pop = window.showModalDialog("/fileDownPop.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?pMetaCode=" + metacode + "","", "width=200, height=100");
+	
+	var parameters = "";
+	$.ajax({
+		type:"post", 
+		dataType:"json",
+		url:"/fileDownInfo.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?pMetaCode=" + metacode + "",
+		data:parameters ,
+		success:function(data){
+			hiddenframe.location = "/fileDown.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?pMetaCode=" + metacode + "";
+			// window.open("/fileDown.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?pMetaCode=" + metacode + "","pop", "width=0, height=0, top=0, statusbar=no, scrollbars=no, toolbar=no");
+		},
+		beforeSend:function(){
+			// 로딩 fadeIn
+			wrapWindowByMask();
+		},
+		complete:function(){
+			// 로딩 fadeOut
+			 $('#mask').fadeOut();
+		}
+	});
+	
+}
+/**
+ * 원문보기
+ */
+function fn_viewMeta(url){
+	
+	var fileExt = url.split('.').pop(); 
+	if(fileExt == 'xml'){
+		var parameters = "pMetaCode=" + "CIGCDC190019";
+		$.ajax({
+			type:"post", 
+			dataType:"json",
+			url:"/addCntFileView.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+			data:parameters ,
+			success:function(data){
+				
+			}
+		});	
+	}
+	window.open(url,'docView','resizable=yes, scrollbars=auto toolbar=no, x=0, y=0, width=1020, height=610');
+}
+
+/**
+ * 마이라이브러리 담기
+ */
+function fn_btnLib(){
+	// var s = window.showModalDialog("/myLibraryPop.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1", "", "dialogHeight:300px;dialogWeight:400px");
+	
+	//maketree_dialog("CIGCDC190019", $("#sMainTitle").val(), "TI");
+	//$("#dialog3").dialog("open");
+}
+
+function fn_customDown(code){
+	var parameters;
+	parameters = "code=" + code;
+	
+	$.ajax({
+		type:"post", 
+		dataType:"json",
+		url:"/getCustomDown.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+		data:parameters ,
+		success:function(data){
+		//alert(JSON.stringify(data));
+			var rltHtml = "";
+			rltHtml += "<div class=\"search_section\">";
+			rltHtml += "	<div class=\"section_head\"><h4>추천다운로드</h4></div>";
+			rltHtml += "	<ul class=\"section_list\">";
+			jQuery.each(data.customInfo, function(index, onerow) {
+				var sfromid = onerow["sfromid"];
+				var sfromName = "";
+				if(sfromid=="CON"){
+					sfromName = "기술사례정보";
+				}else{
+					sfromName = "건설보고서";
+				}
+				if(index==0){
+					rltHtml+="<li class=\"first\" style=\"padding:0;\">";
+				}else{
+					rltHtml+="<li style=\"padding:0;\">";
+				}
+				rltHtml+="	<dl>";
+				if(sfromid=="CON"){
+					rltHtml+="		<dt>"+sfromName+"<a href=\"javascript:fn_dtlSearch2('"+onerow["pMetaCode"]+"');\">"+onerow["sKorTitle"]+"</a></dt>";	
+				}else{
+					rltHtml+="		<dt>"+sfromName+"<a href=\"javascript:fn_dtlSearch1('"+onerow["pMetaCode"]+"');\">"+onerow["sKorTitle"]+"</a></dt>";
+				}
+				rltHtml+="	</dl>";
+				rltHtml += "<dd class=\"txt\">";
+				if(onerow["sToc"]!= "" && onerow["sToc"].length > 256){
+					rltHtml += onerow["sToc"].substring(0, 256) + "...";
+				}else{
+					rltHtml += onerow["sToc"];
+				}
+				if(onerow["sKorAbstract"]!= "" && onerow["sKorAbstract"].length > 256){
+					rltHtml += onerow["sKorAbstract"].substring(0, 256) + "...";
+				}else{
+					rltHtml += onerow["sKorAbstract"];
+				}
+				
+				rltHtml += "</dd>";
+				rltHtml += "<dd class=\"txt_etc\">";
+				if(onerow["sCreator"] != "" && onerow["sPublisher"] != ""){
+					rltHtml += onerow["sCreator"] + " | " + onerow["sPublisher"] + " | " +  onerow["sCreDate"];	
+				}else{
+					rltHtml += onerow["sCreator"] + onerow["sPublisher"]+ " | " +  onerow["sCreDate"];
+				}
+				rltHtml+="	</dd></dl>";
+				rltHtml+="</li>";
+				/**
+				if(index==0){
+					rltHtml+="<li class=\"first\" style=\"padding:0;\">";
+				}else{
+					rltHtml+="<li style=\"padding:0;\">";
+				}
+				rltHtml+="	<dl style=\"position:relative;padding-left:60px\">";
+				if(sfromid=="CON"){
+					rltHtml+="		<dt style=\"position:absolute;line-height:30px;top:-4px;left:0;\">"+sfromName+"</dt>";
+					rltHtml+="		<dd style=\"height:30px;\"><a href=\"javascript:fn_dtlSearch2('"+onerow["pMetaCode"]+"');\">"+onerow["sKorTitle"]+"</a></dd>";
+				}else{
+					rltHtml+="		<dt style=\"position:absolute;line-height:30px;top:-4px;left:0;\">"+sfromName+"</dt>";
+					rltHtml+="		<dd style=\"height:30px;\"><a href=\"javascript:fn_dtlSearch1('"+onerow["pMetaCode"]+"');\">"+onerow["sKorTitle"]+"</a></dd>";
+				}
+				rltHtml+="		<dd style=\"position:absolute;line-height:30px;top:0;right:10px\">"+ onerow["sCreator"] +"</dd>";
+				rltHtml+="	</dl>";
+				rltHtml+="</li>";
+				**/
+			});
+			rltHtml+="</ul></div>";
+			//$("#customDownList").html(rltHtml);
+		}
+	});
+}
+
+function fn_dtlSearch1(pMetaCode){
+	//건설보고서
+	document.frm1.pMetaCode.value = pMetaCode;
+	document.frm1.action = "/viewDtlConRpt.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+	document.frm1.submit();
+}
+
+
+function fn_dtlSearch2(pMetaCode){
+	//건설실무
+	document.frm2.pMetaCode.value = pMetaCode;
+	document.frm2.action = "/viewDtlConWrkDtlSch.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+	document.frm2.submit();
+}
+
+$(document).ready(function(){
+	//alert('1');
+	//fn_ready("CIGCDC190019");
+});
+
+
+function fn_ready(pMetaCode){
+	var parameters;
+	parameters = "pMetaCode=" + "CIGCDC190019";
+	
+	$.ajax({
+		type:"post", 
+		dataType:"json",
+		url:"/detailConWrkDtlSch.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+		data:parameters ,
+		success:function(data){
+			//var customDownCode = data.ConMetaItem.fMainCode;
+			//fn_customDown(customDownCode);
+			var rltHtml = "";
+			// 정보유형 존재시
+			/* if(data.ConMetaItem.sTypeName != null && data.ConMetaItem.sTypeName != ""){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\" class=\"first\">정보유형</th>";
+				rltHtml += "<td colspan=\"3\" class=\"first\">" + data.ConMetaItem.sTypeName;
+				rltHtml += "</td>";
+				rltHtml += "</tr>";
+			} */
+			// 제목
+			if(data.ConMetaItem.sMainTitle != null && data.ConMetaItem.sMainTitle != ""){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\" class=\"first\">제목</th>";
+				rltHtml += "<td colspan=\"3\" class=\"first\">" + data.ConMetaItem.sMainTitle;
+				rltHtml += "</td>";
+				rltHtml += "</tr>";
+				$("#sMainTitle").val(data.ConMetaItem.sMainTitle);
+			}
+			// 주제
+			if(data.ConMetaItem.fMainCode.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">주제</th>";
+				rltHtml += "<td colspan=\"3\"><p class='exp2'>";
+				
+				jQuery.each(data.CodeList, function(index, onerow) {
+					
+					rltHtml += onerow["sFullName"] + "<br />";
+				});
+				rltHtml += "</p>";
+				rltHtml += "</td>";
+				rltHtml += "</tr>";
+			}
+			// 요약정보(개요)
+			if(data.ConMetaItem.sAbstract != null && data.ConMetaItem.sAbstract != ""){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">요약정보</th>";
+				rltHtml += "<td colspan=\"3\">" + data.ConMetaItem.sAbstract;
+				rltHtml += "</td>";
+				rltHtml += "</tr>";
+			}
+			// 발행처
+			rltHtml += "<tr>";
+			rltHtml += "<th scope=\"col\">저자/발행처</th>";
+			rltHtml += "<td colspan=\"3\">";
+			// 저자-개인
+			if(data.ConMetaItem.sCreatorPer.length > 0){
+				rltHtml += data.ConMetaItem.sCreatorPer;
+			}
+			// 저자-기관
+			if(data.ConMetaItem.sCreatorCom.length > 0){
+				rltHtml += data.ConMetaItem.sCreatorCom;
+			}
+			if((data.ConMetaItem.sCreatorPer.length > 0 || data.ConMetaItem.sCreatorCom.length > 0) 
+			&& (data.ConMetaItem.sPubPersonal.length > 0 || data.ConMetaItem.sPubCom.length > 0)){
+				rltHtml += " / ";
+			}
+			// 발행처
+			if(data.ConMetaItem.sPubPersonal.length > 0){
+				rltHtml += data.ConMetaItem.sPubPersonal;
+			}
+			if(data.ConMetaItem.sPubCom.length > 0){
+				rltHtml += data.ConMetaItem.sPubCom;
+			}
+			rltHtml += "</td></tr>";
+			
+			// 출처정보
+			rltHtml += "<tr>";
+			rltHtml += "<th scope=\"col\">출처정보</th>";
+			rltHtml += "<td colspan=\"3\">";
+			// 출처
+			if(data.ConMetaItem.sRight.length > 0){
+				rltHtml += data.ConMetaItem.sRight;
+			}
+			rltHtml += "</td></tr>";
+			// 발행일/작성언어
+			if(data.ConMetaItem.sCreDate.length > 0 || data.ConMetaItem.sLanguage.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">발행일</th>";
+				if(data.ConMetaItem.sCreDate.length > 0){
+					rltHtml += "<td>" + data.ConMetaItem.sCreDate + "</td>";	
+				}else{
+					rltHtml += "<td></td>";
+				}
+				rltHtml += "<th scope=\"col\">작성언어</th>";
+				if(data.ConMetaItem.sLanguage.length > 0){
+					if(data.ConMetaItem.sLanguage == "kor"){
+						rltHtml += "<td>한국어</td>";	
+					}else if(data.ConMetaItem.sLanguage == "eng"){
+						rltHtml += "<td>영어</td>";
+					}
+				}else{
+					rltHtml += "<td></td>";
+				}
+				rltHtml += "</tr>";
+			}
+			// 공사기관[발주자]
+			if(data.ConMetaItem.sProOwner.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">공사기관</th>";
+				rltHtml += "<td colspan=\"3\">[발주자] : ";
+				rltHtml += data.ConMetaItem.sProOwner;
+				rltHtml += "</td></tr>";
+			}
+			// 공사기관[시공자]
+			if(data.ConMetaItem.sProContractor.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">공사기관</th>";
+				rltHtml += "<td colspan=\"3\">[시공자] : ";
+				rltHtml += data.ConMetaItem.sProContractor;
+				rltHtml += "</td></tr>";
+			}
+			// 공사기관[설계자]
+			if(data.ConMetaItem.sProDesigner.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">공사기관</th>";
+				rltHtml += "<td colspan=\"3\">[설계자] : ";
+				rltHtml += data.ConMetaItem.sProDesigner;
+				rltHtml += "</td></tr>";
+			}
+			// 공사기관[감리자]
+			if(data.ConMetaItem.sProManager.length > 0){
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">공사기관</th>";
+				rltHtml += "<td colspan=\"3\">[감리자] : ";
+				rltHtml += data.ConMetaItem.sProManager;
+				rltHtml += "</td></tr>";
+			}
+			
+			if(data.FileList.length > 0){
+				if(data.RelationAtt.length >1){
+					rltHtml += "<tr>";
+					rltHtml += "<th scope=\"col\">관련문서</th>";
+					rltHtml += "<td colspan=\"3\">";
+					jQuery.each(data.RelationAtt, function(index, onerow) {
+						//alert(onerow["strMetaCode"] + "    :    " + onerow["strTitle"]);
+						var url = "https://www.codil.or.kr/doc/" + onerow["strMetaCode"];
+						rltHtml += "<a href="+url+" target='_blank'>" + onerow["strTitle"] + "</a><br />";
+					});
+					rltHtml += "</td></tr>";
+				}else{
+					rltHtml += "<tr>";
+//	 				rltHtml += "<th scope=\"col\" rowspan=\"2\">원문보기</th>";
+					rltHtml += "<th scope=\"col\">원문보기</th>";
+					if(data.ConMetaItem.sURLInfo.substring(0,4) != "http"){
+						rltHtml += "<td>";
+					} else {
+						rltHtml += "<td colspan=\"3\">";
+					}
+					
+					jQuery.each(data.FileList, function(index, onerow) {
+						if(onerow["TIF"] != undefined){
+							rltHtml += "<span class=\"btn_pack dark_blue icon\"><span class=\"srch_white\"></span><input type=\"button\" value=\"TIF\" onclick=\"javascript:fn_viewMeta('" + onerow["TIF"] + "')\"></span>&nbsp;";
+						}
+						if(onerow["PDF"] != undefined){
+							rltHtml += "<span class=\"btn_pack dark_blue icon\"><span class=\"srch_white\"></span><input type=\"button\" value=\"PDF\" onclick=\"javascript:fn_viewMeta('" + onerow["PDF"] + "')\"></span>&nbsp;";
+						}
+						if(onerow["XML"] != undefined){
+							rltHtml += "<span class=\"btn_pack dark_blue icon\"><span class=\"srch_white\"></span><input type=\"button\" value=\"XML\" onclick=\"javascript:fn_viewMeta('" + onerow["XML"] + "')\"></span>&nbsp;"
+							
+							
+						}
+					});
+					
+					if(data.ConMetaItem.sURLInfo.substring(0,4) != "http"){
+						rltHtml += "<th scope=\"col\">원문저장</th>";
+						rltHtml += "<td>";
+						rltHtml += "<span class=\"btn_pack dark_blue icon\" onclick=\"javascript:fn_download('" + data.ConMetaItem.pMetaCode + "')\"><span class=\"down_white\"></span><input type=\"button\" value=\"다운로드\"></span>";
+						
+						// 모바일에서 접속한 경우 경고메세지 출력	
+						if (navigator.userAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || navigator.userAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+							rltHtml += "<br>";
+							rltHtml += "<strong class=\"orange\">※ 모바일로 접속하신분들은 팝업차단을 해제하셔야 정상적인 다운로드가 가능합니다.</strong>";
+						}
+						
+					}
+					rltHtml += "</td></tr>";
+					
+					
+//	 				rltHtml += "<td colspan=\"3\">";
+//	 				if(bowser.msie==true && bowser.version > 9){
+//	 					 rltHtml +="<strong class=\"orange\">※Internet Exporer 10 이상에서 XML이 보이지 않을 경우 <br/> 도구 > 호환성 보기 설정 > '이 웹 사이트 추가(D)'란에 codil.or.kr을 추가해주시기 바랍니다.</strong>";
+//	 				} else if (bowser.msie==true && bowser.version <= 9) {
+//	 					rltHtml +="<strong class=\"orange\">※Internet Exporer 9 이하에서 XML이 보이지 않을 경우 <br/> 도구 > 호환성 보기 설정 > '호환성 보기에서 모든 웹사이트 표시(E)' 선택하시기 바랍니다.</strong>";
+//	 				}
+//	 				rltHtml +="</th>";
+				}
+				rltHtml += "<tr>";
+				rltHtml += "<th scope=\"col\">참고사항</th>";
+				rltHtml += "<td colspan=\"3\">";
+				rltHtml += "<strong class=\"orange\">본 자료는 공공/민간으로부터 수집한 특정 현장 적용사례로서 정부나 한국건설기술연구원의 기준 또는<br /> 지침이 아니므로, 각 현장이나 사업의 특성을 고려하여 참고자료로 활용하시기 바랍니다.</strong>";
+				rltHtml += "</td></tr>";
+			}
+			$("#tbody").html(rltHtml);
+			
+			var strUrl = 'https://www.codil.or.kr/' + "doc/" + data.ConMetaItem.pMetaCode;
+			var setClipHtml = "";
+			setClipHtml += "<a href=\"javascript:setClip('주소를 클립보드로 복사하였습니다.','" + strUrl + "')\" title=\"주소를 복사합니다.\" style=\"padding:1px 3px; border:1px solid #d9d9d9; color:#666; font-size:11px; margin-right:5px;\">주소복사</a>";
+			setClipHtml += "<a href=\"javascript:setClip('주소를 클립보드로 복사하였습니다.','" + strUrl + "')\" class=\"url\">" + strUrl + "</a>";
+			
+			//$("#setClip").html(setClipHtml);
+		},
+		beforeSend:function(){
+			// 로딩 fadeIn
+			wrapWindowByMask();
+		},
+		complete:function(){
+			// 로딩 fadeOut
+			 $('#mask').fadeOut();
+		}
+	});
+}
+</script>
+
+
+</head>
+
+<body>
+<div class="skip">
+    	<a href="#container">본문바로가기</a>
+    </div>
+    
+    
+    <div id="wrap">
+    	<header id="header">
+        	
+
+
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCXWQXBPT2" 
+	integrity="sha384-5+TAaV2G6bz5w44uR/3jqe85e5K4GSvDKHmNaqpEvtGY3qApR8qT2or8LY5xcXeW" crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-PCXWQXBPT2',{
+	  'user_id' : 'GUEST',
+	  'custom_map': {'dimension2' : '211.169.234.210'}		// 운영(CODIL)
+	  //'custom_map': {'dimension1' : '211.169.234.210'}		// 개발(216)
+  });
+  
+  gtag('event','IPAddressTrace', {'event_category' : 'IPTrace', 'event_label' : '211.169.234.210', 'IPAddress' : '211.169.234.210'});
+</script>
+<!--[if lt IE 10]>
+	<script src="/js/egovframework/html5shiv.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1/"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/egovframework/jquery.cycle.all.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+<script type="text/javascript" src="/js/egovframework/jquery-ui.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"></script>
+<link href="/css/egovframework/jquery-ui.css;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/egovframework/jquery.datepicker.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" ></script>
+<script type="text/javascript" src="/js/egovframework/com/codil/common.js;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?v=20251103"></script>
+<script type="text/javascript">
+
+var getContextPath = "";
+
+function fn_main_headPageMove(menuNo, url){
+	document.selectOne.menuNo.value=menuNo;
+	document.selectOne.chkURL.value=url;
+    document.selectOne.action = "/sym/mnu/mpm/EgovMainMenuIndex.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+    document.selectOne.submit();
+}
+/**
+ * LOGOUT
+ */
+function actionLogout()
+{
+	if(!confirm("로그아웃하시겠습니까?")){
+		return false;
+	}
+	document.selectOne.action = "/uat/uia/actionLogout.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+	document.selectOne.submit();
+}
+
+
+function fn_moment(){
+	alert("서비스 준비중입니다.");	
+}
+
+/**
+ * 통합검색
+ */
+function fn_totalSearch(tx){
+	if(tx == ""){
+		if($("#totalSearchtx").val() == ""){
+			alert("검색어를 입력해주세요.");
+		}else{
+			document.selectOne.tx.value = $("#totalSearchtx").val();
+			document.selectOne.rescanChk.value = $("#rescanChk").val();
+			document.selectOne.action = "/viewTotalSearch.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+			document.selectOne.submit();				
+		}
+	}else{
+		document.selectOne.tx.value = tx;
+		document.selectOne.rescanChk.value = $("#rescanChk").val();
+		document.selectOne.action ="/viewTotalSearch.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1";
+		document.selectOne.submit();			
+	}
+	
+}
+
+function fn_linkedMenuCount2(link, num){
+	$.ajax({
+		async : true,
+		type : "post",
+		dataType : "json",
+		url : "/selectPopupMenu"+num+".do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+		success : function(data) {	}
+	});
+	
+	window.open(link,"_blank");
+		
+}
+
+/**
+ * 우수기술홍보 팝업
+ */
+function fn_popup(url) {
+	$.ajax({
+		type : "post",
+		dataType : "json",
+		url : "/selectPopupMenu7.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+		success : function(data) {	}
+	});
+	var pop = window.open(
+			url,
+				"",
+				"toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=800px,height=550px,top=50px,left=50px");
+}
+
+/**
+ * 건설교육동영상 팝업
+ */
+function fn_popup2(url) {
+	$.ajax({
+		type : "post",
+		dataType : "json",
+		url : "/selectPopupMenu8.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+		success : function(data) {	}
+	});
+	var pop = window.open(
+				url,
+				"",
+				"toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=620px,height=700px,top=50px,left=50px");
+}
+
+function fn_popup3(url) {
+	var url2="http://roaddesign.kict.re.kr/";
+	var pop = window.open(
+				url2,
+				"",
+				"");
+}
+
+/**
+ * 엔터키 이벤트
+ */
+function fn_onKeyDown(id){
+	if(event.keyCode == 13){
+		if(id=="totalSearchtx"){
+			fn_totalSearch('');
+		}
+	}
+}
+
+	 var timeFlag=true;
+	 
+function imgChange1(){
+	$('#mainItem01').fadeOut(400,function(){
+	 if($('#mainItemImage01').attr('src') == "/Codil/images/egovframework/com/codil/main/img_slide01-01.jpg"){
+		 $('#mainItemImage01').attr('src','/Codil/images/egovframework/com/codil/main/img_slide01-02.jpg');	 
+	 }else{
+		 $('#mainItemImage01').attr('src','/Codil/images/egovframework/com/codil/main/img_slide01-01.jpg');
+	 }
+	    
+	 $(this).fadeIn(400);
+    });
+	setTimeout("imgChange2()", 1000);
+}
+	
+function imgChange2(){
+	$('#mainItem11').fadeOut(400,function(){
+	 if($('#mainItemImage11').attr('src') == "/Codil/images/egovframework/com/codil/main/img_slide02-01.jpg"){
+		 $('#mainItemImage11').attr('src','/Codil/images/egovframework/com/codil/main/img_slide02-02.jpg');	 
+	 }else{
+		 $('#mainItemImage11').attr('src','/Codil/images/egovframework/com/codil/main/img_slide02-01.jpg');
+	 }
+	    
+	 $(this).fadeIn(400);
+    });
+	setTimeout("imgChange3()", 1000);
+}
+	
+function imgChange3(){
+	$('#mainItem21').fadeOut(400,function(){
+		 if($('#mainItemImage21').attr('src') == "/Codil/images/egovframework/com/codil/main/img_slide03-01.jpg"){
+			 $('#mainItemImage21').attr('src','/Codil/images/egovframework/com/codil/main/img_slide03-02.jpg');	 
+		 }else{
+			 $('#mainItemImage21').attr('src','/Codil/images/egovframework/com/codil/main/img_slide03-01.jpg');
+		 }
+		    
+		 $(this).fadeIn(400);
+	    });
+}	
+
+	 $(document).ready(function(){
+		 //alert("");
+		 fn_searchDisplay();
+		 //setInterval("imgChange1()",5000);
+		// 통합검색시 조회 TEXT 셋팅
+		
+		$("#totalSearchtx").val("");	
+		
+		var iCheck = "";
+		if(iCheck != "" && iCheck != null) {
+			alert('일정 시간이 경과하여 세션이 종료되었습니다.\n다시 로그인 해주세요.');
+			parent.location.reload();
+			return;
+		}
+		
+		 $("#nav_wrap").hover(function(){
+			 //$("#mainDiv").addClass("full_menu",500);
+			 $("#mainDiv").toggleClass("full_menu");
+			 $("#head_depth02").fadeIn("fast");
+			 //$(".depth02").fadeIn("fast");
+		 },function(){
+			//$("#mainDiv").removeClass("full_menu",500);
+			if( $("#mainDiv").is(":animated") ){
+				return false;
+			}else{
+				$("#mainDiv").toggleClass("full_menu");
+				$("#head_depth02").fadeOut("slow");
+				$('[id^=head_nav_]').removeClass("active");	
+			}
+		 });
+		
+		 /*
+		 var parameters = "";
+			$.ajax({
+				type:"post", 
+				dataType:"json",
+				url:"/getbestkeyword.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+				data:parameters ,
+				success:function(data){
+					// alert(JSON.stringify(data));
+					var srchHtml = "";
+					jQuery.each(data.bestkeyword, function(index, onerow) {
+						srchHtml += "<span style='margin-right:10px;'><a href=\"javascript:fn_totalSearch('" + onerow["sName"] + "')\">" + (index+1) + ". " + onerow["sName"] + "</a></span>";
+					});
+					
+					$("#srch_txt").html(srchHtml);
+				}
+		 });
+		*/
+
+		var srchHtml = "";
+		srchHtml += "<a href=\"javascript:fn_totalSearch('초고층')\">1. 초고층</a>";
+		srchHtml += "<a href=\"javascript:fn_totalSearch('성능개선')\">2. 성능개선</a>";
+		srchHtml += "<a href=\"javascript:fn_totalSearch('위치정보')\">3. 위치정보</a>";
+		srchHtml += "<a href=\"javascript:fn_totalSearch('지지대')\">4. 지지대</a>";
+		srchHtml += "<a href=\"javascript:fn_totalSearch('내진성능')\">5. 내진성능</a>";
+		//srchHtml += "<a href=\"javascript:fn_totalSearch('친환경')\">6. 친환경</a>";
+		//srchHtml += "<a href=\"javascript:fn_totalSearch('생태교량')\">7. 생태교량</a>";
+		$("#srch_txt").html(srchHtml);
+		
+		
+		fn_autoKeyWord();
+
+	 });
+	 
+	 // 탭메뉴 열기
+	 function fn_fadeIn(){
+		 $("#nav_wrap").hover(function(){
+			 //$("#mainDiv").addClass("full_menu",500);
+			 $("#mainDiv").toggleClass("full_menu");
+			 $(".depth02").fadeIn("slow");
+		 },function(){
+			//$("#mainDiv").removeClass("full_menu",500);
+			 if( $("#mainDiv").is(":animated") ){
+				return false;
+			}else{
+				$("#mainDiv").toggleClass("full_menu");
+				$(".depth02").fadeOut("fast");
+				$('[id^=head_nav_]').removeClass("active");	
+			}
+			
+		 });
+	 }
+	 
+	 var autoKeyword = [];
+	 
+	 // 통합검색 오토컴플릿
+	 function fn_autoKeyWord(val){
+		 $.ajax({
+			type:"post", 
+			dataType:"json",
+			url:"/getautokeyword.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1",
+			success:function(data){
+				
+				jQuery.each(data.autokeyword, function(index, onerow) {
+					var sName=onerow["sName"];
+					if(sName.length > 40){
+						sName = sName.substring(0,40) + " ...";
+					}
+					autoKeyword[index] = {label:sName, value:sName};
+				});
+				
+				function split( val ){
+					return val.split(",");
+				}    
+				function extractLast( term ){
+					return split( term ).pop();    
+				}
+				
+				$( "#totalSearchtx" ).bind( "keydown", function( event ) {
+					if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "ui-autocomplete" ).menu.active ) {
+						event.preventDefault();
+					}      
+				}).autocomplete({        
+					minLength: 0,
+					source: function( request, response ) {
+					// delegate back to autocomplete, but extract the last term          
+						response( $.ui.autocomplete.filter(
+								autoKeyword, extractLast( request.term ) ) 
+						);
+					},        
+					focus: function( event, ui) {
+						return false;
+					},        
+					select: function( event, ui ) {
+						this.value = ui.item.value;
+						fn_totalSearch(ui.item.value);
+						return false;
+					}      
+				})
+					
+			}
+		 });
+	 }
+	 
+	 function errorBoard() {
+		 var url = "/cop/bbs/selectBoardList.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1?bbsId=BBSMSTR_000000000221&bbsAttrbCode=BBSA03";
+		 window.open(url, "board", "width=800px, height=700px, scroll=true, resize=true");
+	 }
+	 
+	 function libSearch()	{
+				var value = $(":radio[name='GU']:checked").val(); 
+				document.kipris_search2.GU1.value = value;
+				
+				window.open('', 'fn_Search', 'width=830, height=800, resizable= yes');
+			    
+			    document.kipris_search2.target = 'fn_Search';
+				document.kipris_search2.submit();
+		}
+	 
+	 // 전문건설 지원정보 클릭상태 구분자
+	 var isbuild=true;
+	
+	 // 전문건설 지원정보 팝업창
+	 function buildPop(url){
+// 		 isbuild = false;
+//		 alert("window.screen.height : " + window.screen.height);
+		 var height=window.screen.height - 250;
+//		 alert("height : " + height);
+		 $("#ul_type2").show();
+		 var pop = window.open(
+					url,
+					"child",
+					"toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=1,resizable=yes,width=1040px,height="+ height +"px,top=0px,left=50px");
+	 }
+	 
+	 function menuDown(id){
+		 if( $('#head_nav_'+id).hasClass("active")==false){
+			 $('[id^=head_nav_]').removeClass("active",400);
+		 }
+		 $('#head_nav_'+id).addClass("active",400);
+	 }
+
+	 
+
+ $(document).ready(function() {
+	 
+ 	$("#fullMenu1").hover(function (e) {
+		var callFunction = "fn_mainMenuDown()";
+		timer = setTimeout(callFunction, 500);
+	}, function (e) {
+		e = e || event;
+		var goingto = e.relatedTarget || e.toElement;
+		if (!goingto || goingto.id != "fullMenu2") {
+			if( $(".fullmenu").is(":animated") ){
+				clearTimeout(timer);
+				return false;
+			}else{
+				clearTimeout(timer);
+				//$("#fullMenu2").slideUp();
+				$("#fullMenu2").css("display","none");
+				//$(".fullMenu").slideUp();
+			}
+			
+		}
+	});
+	
+	
+	$("#container").mouseover(function () {
+		if( $(".fullmenu").is(":animated") ){
+			return false;
+		}else{
+			//alert("111");
+			//$(".fullMenu").slideUp();
+			$(".fullmenu").css("display","none");
+		}
+	});
+	
+ });
+	 
+function fn_mainMenuDown(){
+	$(".fullmenu").slideDown(700);
+}
+
+function fn_mainActive(id){
+	$("#full1Dep"+id).toggleClass("active");
+	$("#full2Dep"+id).toggleClass("active");
+}
+
+function fn_mainDActive(){
+	$("[id^=full1Dep]").removeClass("active");
+	$("[id^=full2Dep]").removeClass("active");
+}
+
+function fn_searchDisplay(){
+	var rtnHtmlMain="";
+	var rtnHtmlSub="";
+
+	rtnHtmlMain+="<div class=\"tot_srch\">";
+	rtnHtmlMain+="	<form id=\"selectOne\" name=\"selectOne\">";
+	rtnHtmlMain+="		<input type=\"hidden\" id=\"tx\" name=\"tx\">";
+	rtnHtmlMain+="		<input type=\"hidden\" id=\"sType\" name=\"sType\" value=\"ALL\">";
+	rtnHtmlMain+="		<fieldset>";
+	rtnHtmlMain+="			<legend>통합검색 입력폼</legend>";
+	rtnHtmlMain+="			<label class=\"tot_label\">";
+	rtnHtmlMain+="				<span class=\"blind\">검색어</span>";
+	rtnHtmlMain+="				<input type=\"text\" id=\"totalSearchtx\" name=\"totalSearchtx\" class=\"\"  onkeydown=\"javascript:if(event.keyCode==13){fn_totalSearch(this.value); return false;}\" title=\"검색어를 입력하세요.\" placeholder=\"검색어를 입력하세요.\"/>";
+	rtnHtmlMain+="			</label>";
+	rtnHtmlMain+="			<button type=\"submit\" class=\"btn_srch\" title=\"검색\" onclick=\"javascript:fn_totalSearch('');\">검색</button>";
+	rtnHtmlMain+="		<div id=\"rescanChkDiv\">";
+	rtnHtmlMain+="			<label class=\"srch_resch\" for=\"rescanChk\"><input type=\"checkbox\" id=\"rescanChk\" name=\"rescanChk\" onclick=\"javascript:fn_rechk_on();\">연구개발정보 검색</label>";
+	rtnHtmlMain+="		</div>";
+	rtnHtmlMain+="		</fieldset>";
+	rtnHtmlMain+="	</form>";
+	rtnHtmlMain+="</div>";
+	
+	rtnHtmlSub+="<div class=\"srch_total\">";
+	rtnHtmlSub+="	<form id=\"selectOne\" name=\"selectOne\">";
+	rtnHtmlSub+="		<input type=\"hidden\" id=\"tx\" name=\"tx\">";
+	rtnHtmlSub+="		<input type=\"hidden\" id=\"sType\" name=\"sType\" value=\"ALL\">";
+	rtnHtmlSub+="		<fieldset>";
+	rtnHtmlSub+="		<label class=\"window\">";
+	rtnHtmlSub+="			<span class=\"blind\">검색어</span>";
+	rtnHtmlSub+="			<input type=\"text\" id=\"totalSearchtx\" name=\"totalSearchtx\" class=\"\"  onkeydown=\"javascript:if(event.keyCode==13){fn_totalSearch(this.value); return false;}\" title=\"검색어를 입력하세요.\" placeholder=\"검색어를 입력하세요.\"/>";
+	rtnHtmlSub+="		</label>";
+	rtnHtmlSub+="		<button type=\"submit\" class=\"btn_srch02\" title=\"검색\" onclick=\"javascript:fn_totalSearch('');\">검색</button>";
+	rtnHtmlSub+="		<div id=\"rescanChkDiv\">";
+	rtnHtmlSub+="			<label class=\"srch_resch\" for=\"rescanChk\"><input type=\"checkbox\" id=\"rescanChk\" name=\"rescanChk\" onclick=\"javascript:fn_rechk_on();\">연구개발정보 검색</label>";
+	rtnHtmlSub+="		</div>";
+	rtnHtmlSub+="		</fieldset>";
+	rtnHtmlSub+="	</form>";
+	rtnHtmlSub+="</div>";
+	
+	if("" == 'true'){
+		$("#mainSearchZone").html(rtnHtmlMain);
+	}else{
+		$("#subSearchZone").html(rtnHtmlSub);
+	}
+	
+	if(""!=null && ""!=""){
+		$(".srch_resch").addClass('act');
+		$("#rescanChk").prop('checked', true);	
+	}
+}
+
+function fn_rechk_on(){
+	if($(".srch_resch").hasClass('act')){
+		$(".srch_resch").removeClass('act');
+	}else{
+		$(".srch_resch").addClass('act');
+	}
+} 
+
+</script>
+<form name="kipris_search2" method="post" action="http://link.kipris.or.kr/link/AJAX/BTOTAL.jsp" target="_blank" rel="noopener noreferrer" >
+<input type="hidden" name="reg_key" value="WQKg+Yh+gRrfj3z93TFNuw==" />
+<input type="hidden" name="GU1" />
+<input type="hidden" name="GU"/>
+<input type="hidden" name="Query"/>		
+</form>
+
+	<div class="inner4">
+		<h1 class="logo"><a href="/codil.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1"><img src="/images/egovframework/com/codil/common/logo.png;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" alt="CODIL 건설기술정보시스템" /></a></h1>
+		<div class="top_info">
+			<ul class="gnb">
+				
+	       		<li><a href="/selectComInfo1.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1">시스템소개</a></li>
+	            <li><a href="/helpdesk/search.do">고객센터</a></li>
+	            <li><a href="/selectSiteMap.do">사이트맵</a></li>
+			</ul>
+		</div>
+		<!-- 검색 -->
+		<div id="subSearchZone"></div>
+		<!-- //검색 -->
+	</div>
+	
+	<div class="lnb" id="fullMenu1">
+		<h2 class="blind">서비스 메뉴</h2>
+	    <!-- nav -->
+		<nav>
+	        <div class="inner4">
+
+            	<ul class="menu_wrap">
+            		<li>
+            			<a id="full1Dep1" onmouseover="javascript:fn_mainActive('1');" onmouseout="javascript:fn_mainDActive();" href="/viewConStd.do">건설기준정보</a>
+            		</li>
+            		<li>
+            			<a id="full1Dep2" onmouseover="javascript:fn_mainActive('2');" onmouseout="javascript:fn_mainDActive();" href="/viewConWrkDtlSch.do?gubun=tch">건설실무정보</a>
+            		</li>
+            		<li>
+            			<a id="full1Dep3" onmouseover="javascript:fn_mainActive('3');" onmouseout="javascript:fn_mainDActive();" href="/viewConRpt.do?gubun=rpt">연구개발정보</a>
+            		</li>
+            		<li>
+            			<a id="full1Dep4" onmouseover="javascript:fn_mainActive('4');" onmouseout="javascript:fn_mainDActive();" href="/policy/search.do">정보광장</a>
+            		</li>
+            	</ul>
+
+	        </div><!-- nav bg -->
+		</nav>
+	    
+	    <!-- //nav -->
+	</div>
+	<!-- 
+
+		풀다운메뉴
+		활성화시 display:block
+
+	 -->
+	<div class="fullmenu" id="fullmenu2" style="display:none">
+		<div class="inner4">
+			<!-- 건설기준정보 -->
+			<ul id="full2Dep1" onmouseover="javascript:fn_mainActive('1');" onmouseout="javascript:fn_mainDActive();">
+  				<li>
+  					<!-- <a href="/viewConStd.do">건설공사기준</a> -->
+  					<a href="/viewConStd.do">설계기준/시방서</a>
+  				</li>
+  				<li>
+  					<a href="/viewSubTchStd.do">하위기술기준</a>
+  				</li>
+  				<li>
+  					<a href="/viewAnwGuide.do">행정규칙</a>
+  				</li>
+  				<li>
+  					<a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000202&bbsAttrbCode=BBSA01">표준품셈/표준시장단가</a>
+  				</li>
+				<li>
+  					<a href="/viewMoctRoadGuide.do?scCode=CT1">기술안전 공사기준</a>
+  				</li>
+  				<li>
+  					<a href="/viewMoctRoadGuide.do">도로건설 공사기준</a>
+  				</li>
+  				<li>
+  					<a href="/viewMoctRoadGuide.do?scCode=AC1">건축 공사기준</a>
+  				</li>
+  				<li>
+  					<a href="/viewMoctRoadGuide.do?scCode=WT1">수자원/환경 공사기준</a>
+  				</li>
+  				<li>
+  					<a href="/viewMoctRoadGuide.do?scCode=ET1">기타시설 공사기준</a>
+  				</li>
+  				<li>
+  					<a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000301&bbsAttrbCode=BBSA01">교통시설 투자평가</a>
+  				</li>
+			</ul>
+			<!-- 건설실무정보 -->
+			<ul id="full2Dep2" onmouseover="javascript:fn_mainActive('2');" onmouseout="javascript:fn_mainDActive();">
+    			<li>
+   					<a href="/viewConWrkDtlSch.do?gubun=tch">기술정보</a>
+   				</li>
+   				<li>
+   					<a href="/viewConWrkDtlSch.do?gubun=bus">사례정보</a>
+   				</li>
+   				<li>
+   					<a href="/viewCostSave.do">건설공사원가절감/VE</a>
+   				</li>
+   				<li>
+   					<a href="/viewConSafeDB.do">건설안전/재난재해</a>
+   				</li>
+   				<li>
+   					<a href="javascript:fn_linkedMenuCount2('https://www.kaia.re.kr/portal/newtec/comparelist.do?menuNo=200076','3')">건설신기술</a>
+   				</li>
+   				<li>
+   					<a href="/viewSbSupportInf.do">중소기업지원정보</a>
+   				</li>
+   				<li>
+   					<a href="/viewCovidInfo.do">코로나19 대응정보</a>
+   				</li>
+   				<li>
+   					<a href="/issueFocus.do ">이슈포커스</a>
+   				</li>
+			</ul>
+			<!-- 연구개발정보 -->
+			<ul id="full2Dep3" onmouseover="javascript:fn_mainActive('3');" onmouseout="javascript:fn_mainDActive();">
+    			<li>
+   					<a href="/viewConRpt.do?gubun=rpt">건설보고서/발간자료</a>
+   				</li>
+   				<li>
+<!-- 
+   					<a href="https://library.kict.re.kr/search/catalog.do">KICT소장정보</a>
+ -->   					
+   					<a href="javascript:fn_linkedMenuCount2('https://library.kict.re.kr/search/catalog.do','3')">KICT소장정보</a>
+   				</li>
+   				<li>
+   					<a href="/selectThesis.do">학술/논문(RISS)</a>
+   				</li>
+   				<li>
+   					<a href="/selectNdslApi.do">논문/보고서(NDSL)</a>
+   				</li>
+   				<li>
+<!-- 
+   					<a href="https://www.kipris.or.kr/khome/main.do">특허정보</a>
+ -->   					
+   					<a href="javascript:fn_linkedMenuCount2('https://www.kipris.or.kr/khome/main.do','3')">특허정보</a>
+   				</li>
+   				<li>
+   					<a href="/viewTchDevNews.do">건설기술동향</a>
+   				</li>
+   				<li>
+   					<a href="/selectSmartConInfo.do">스마트건설정보</a>
+   				</li>   				
+			</ul>
+			<!-- 정보광장 -->
+			<ul id="full2Dep4" onmouseover="javascript:fn_mainActive('4');" onmouseout="javascript:fn_mainDActive();">
+   				<li>
+   					<a href="/policy/search.do">건설정책</a>
+   				</li>
+   				<li>
+   					<a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000008&bbsAttrbCode=BBSA03">건설뉴스</a>
+   				</li>
+   				<li>
+   					<a href="/selectCodilRelSite.do">건설기술정보사이트</a>
+   				</li>
+   				<li>
+   					<a href="/rankService.do">랭킹정보</a>
+   				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //풀다운메뉴 -->
+
+        </header><!-- end header -->
+        
+        <article id="container" style="margin-top:30px">
+			<h2 class="blind">본문</h2>
+			<div class="inner2">
+	        	
+	            
+				
+	            	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<div class="lnb_area">
+			<h3 class="sub_tit">건설기준정보</h3>
+			<nav class="lnb_wrap">
+				<ul class="lnb_1dep">
+					<li class="first active"><a href="/viewConStd.do"><!-- 건설공사기준 -->설계기준/시방서</a></li>
+					<li class="first "><a href="/viewSubTchStd.do">하위기술기준</a></li>
+					<li class=""><a href="/viewAnwGuide.do">행정규칙</a></li>
+					<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000202&bbsAttrbCode=BBSA01">품셈/표준시장단가</a>
+						<ul class="lnb_2dep">
+							<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000202&bbsAttrbCode=BBSA01">건설공사표준품셈</a></li>
+							<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000203&bbsAttrbCode=BBSA01">건설신기술품셈</a></li>
+							<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000204&bbsAttrbCode=BBSA01">표준시장단가</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="/viewMoctRoadGuide.do?scCode=CT1&sType=commonTotal">기술안전 공사기준</a></li>
+					<li class=""><a href="/viewMoctRoadGuide.do?scCode=MT1&sType=RefTypeAll">도로건설 공사기준</a>
+						<!-- 
+						<ul class="lnb_2dep">
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=MT1">기준유형</a></li>
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=MT3">사업공종</a></li>
+						</ul>
+						 -->
+					</li>
+					<li class=""><a href="/viewMoctRoadGuide.do?scCode=AC1&sType=constTotal">건축 공사기준</a>
+						<!-- 
+						<ul class="lnb_2dep">
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=AC1">기준유형</a></li>
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=AC2">사업공종</a></li>
+						</ul>
+						 -->
+					</li>
+					<li class=""><a href="/viewMoctRoadGuide.do?scCode=WT1&sType=waterTotal">수자원/환경 공사기준</a>
+						<!-- 
+						<ul class="lnb_2dep">
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=WT1">기준유형</a></li>
+							<li class=""><a href="/viewMoctRoadGuide.do?scCode=WT2">사업공종</a></li>
+						</ul>
+						 -->
+					</li>
+					<li class=""><a href="/viewMoctRoadGuide.do?scCode=ET1&sType=etcTotal">기타시설 공사기준</a></li>
+					<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000301&bbsAttrbCode=BBSA01">교통시설 투자평가</a>
+						<ul class="lnb_2dep">
+							<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000301&bbsAttrbCode=BBSA01">지침서</a></li>
+							<li class=""><a href="/helpdesk/search.do?bbsId=BBSMSTR_900000000302&bbsAttrbCode=BBSA01">연구보고서</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	
+	
+	
+	
+	
+	
+	            	
+	            	 
+	
+	
+	
+
+	       		
+	       		
+	            <section id="content" style="padding:0">
+					<div class="content_wrap">
+		            	<div class="h3_box">
+		                	
+		                    
+		                    
+		                    	<h3>건설공사기준</h3>
+		                    
+		                    
+		                    <div class="location">
+		                    	<span class="home"><a href="/" title="홈으로"><img src="/images/egovframework/com/codil/icon/icon_home.png;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" alt="홈으로" /></a></span>
+		                        
+		                        
+		                        
+			                        <span><a href="javascript:fn_linkedMenu('/viewConStd.do')">건설기준정보</a></span>
+			                        <span class="active"><a href="javascript:fn_linkedMenu('/viewConStd.do')">건설공사기준</a></span>
+		                        
+		                        
+		                    </div>
+		                </div>
+		                
+		                <div class="content">
+		                <!--[if IE 7 ]><hr class="ie7" /><![endif]-->
+		                	
+		                    <div>
+		                    	<h4 class="bu_box_arr2" >상세정보보기</h4>
+		                    	<!-- <span class="pr" id="setClip" style="top:25px;"></span> -->
+		                    </div>
+		                    <table summary="선택하신 학술행사일정의 상세정보를 제공합니다." class="tbl_type03">
+		                    	<caption>상세정보보기</caption>
+		                        <colgroup>
+		                        	<col width="120px" />
+		                            <col />
+		                            <col width="120px" />
+		                            <col />
+		                        </colgroup>
+		                        <tbody id="tbody">
+		                        	
+									<tr>
+		                            	<th scope="col" class="first">제목</th>
+	                            		<td colspan="3" class="first">
+	                            			도로교 설계기준(한계상태설계법), 2016 : 일반교량편
+	                            		</td>
+		                            </tr>
+		                            <tr>
+		                            	<th scope="col">주제</th>
+		                                <td colspan="3">
+											
+		                            			시설물분류 : 운송 교통시설 > 교량시설 > 도로교<br />
+		                            		
+		                            			공종분류 : 토목공종 > 교량공사<br />
+		                            		
+		                                </td>
+		                            </tr>
+		                            
+		                            <tr>
+		                            	<th scope="col">저자/발행처</th>
+		                                <td colspan="3">
+		                                	
+		                                	
+		                                	
+		                                	
+		                                	
+		                                		국토교통부
+		                                	
+		                                </td>
+		                            </tr>
+		                            
+			                            <tr>
+			                            	<th scope="col">출처정보</th>
+			                                <td colspan="3">
+			                                	국토교통부
+			                                </td>
+			                            </tr>
+		                            
+		                            
+		                            	<tr>
+			                            	<th scope="col">발행일</th>
+			                                <td>2016</td>
+			                                <th scope="col">작성언어</th>
+			                                <td>
+			                                	
+			                                		
+			                                			한국어
+			                                		
+			                                		
+			                                	
+			                                </td>
+			                            </tr>
+		                            
+		                            
+									
+									
+									
+									
+										
+										
+											<tr>
+												<th scope="col">원문보기</th>
+												
+													
+														<td>	
+													
+													
+												
+												
+			                            			
+			                            			
+			                            				<a href="javascript:fn_viewMeta('https://www.codil.or.kr/filebank/construction/DC/CIGCDC190019/CIGCDC190019.pdf?stream=T');" class='btn_basic'><i class="ico_srh">PDF</i></a>&nbsp;
+			                            			
+			                            			
+			                            		
+			                            		</td>
+												
+													<th scope="col">원문저장</th>
+														<td>
+															
+															<!-- 
+																
+																	
+																		
+								                            			
+								                            				<a href="https://www.codil.or.kr/filebank/construction/DC/CIGCDC190019/CIGCDC190019.pdf" class='btn_basic' target="_blank"><i class="ico_download">다운로드</i></a>
+								                            			
+								                            			
+								                            		
+																
+																
+															 -->
+															
+																
+																	
+							                            			
+							                            				<a href="https://www.codil.or.kr/filebank/construction/DC/CIGCDC190019/CIGCDC190019.pdf" class='btn_basic' target="_blank"><i class="ico_download">다운로드</i></a>
+							                            			
+							                            			
+							                            		
+															
+															
+														</td>
+												
+											</tr>
+										
+									
+		                            <tr>
+										<th scope="col">참고사항</th>
+										<td colspan="3">
+										<strong class="orange">본 자료는 공공/민간으로부터 수집한 특정 현장 적용사례로서 정부나 한국건설기술연구원의 기준 또는<br /> 지침이 아니므로, 각 현장이나 사업의 특성을 고려하여 참고자료로 활용하시기 바랍니다.</strong>
+											
+											
+										</td>
+									</tr>
+		                            
+		                        </tbody>
+		                    </table>
+		                </div>
+		                <div class="btn_box mb20">
+		                <!-- 
+			                <span class="pl">
+			                	<span class="btn_pack white icon" onclick="javascript:fn_btnLib()"><span class="lib"></span><input type="button" value="MyLIB 담기" /></span>
+			                </span>
+			             -->
+			                <span class="pr">
+			                  	<span class="btn_pack white"><input type="button" value="목록" onclick="javascript:history.go(-1);"/></span>
+			                </span>
+		                </div>
+		                <form name="frm1">
+		                	<input name="pMetaCode" type="hidden"/>
+		                    <input name="gubun" type="hidden" value="rpt"/>
+		                    <input name="pageIndex" type="hidden" value="1"/>
+		                </form>
+		                <form name="frm2">
+		                	<input name="pMetaCode" type="hidden"/>
+		                    <input name="gubun" type="hidden" value="tch"/>
+		                    <input name="pageIndex" type="hidden" value="1"/>
+		                </form>
+		                <!-- 
+		                <div id="customDownList">
+		                </div>
+		                 -->
+		                 <!-- <input id="pageIndex" name="pageIndex" type="hidden" value="1"/> -->
+		            </div>	<!--  end content_wrap -->
+				</section>
+	        </div> <!-- end container -->
+        </article>
+        
+        <footer id="footer">
+        	
+
+
+
+
+
+
+
+<script type="text/javascript">
+var getContextPath = "";
+</script>
+	
+	<h2 class="blind">사이트 정보</h2>
+	<div class="inner4">
+		<nav class="bnb mb10">
+			
+			
+			
+			<a href="/selectCopyRightPol.do;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1">홈페이지저작권 정책</a>
+			
+			<a href="https://data.molit.go.kr/systemQuality/write?system_id=S0074" target="_blank" rel="noopener noreferrer">품질오류 신고 및 확인</a>
+			<a href="/selectOpenAPIMenu.do">Open API</a>
+			
+			
+		</nav>
+		<p class="foot_img01"><a href="http://www.molit.go.kr/" target="_blank" rel="noopener noreferrer"  title="새창열림" class="btn_molit"><img src="/images/egovframework/com/codil/common/logo_molit_c.png;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" alt="국토교통부" /></a></p>
+		<p class="foot_img02"><img src="/images/egovframework/com/codil/common/logo_kict.png;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" alt="한국건설기술연구원" /></p>
+		<p class="foot_img03"><img src="/images/egovframework/com/codil/common/mark.png;jsessionid=Ww8qobJgaq22ZBvVezU8CHmwzbjjcsmW7sWU8WPogjMkF4ntT1faplYbvzKLCS4p.codil_servlet_engine1" alt="국가지식지정" /></p>
+		<address>10223 경기도 고양시 일산서구 고양대로 283(대화동 2311) 한국건설기술연구원 미래스마트건설연구본부<br />
+		문의전화 : 070-8712-3400  |  <abbr class="btn_mail" title="codil@kict.re.kr">문의메일 ( codil@kict.re.kr )</abbr></address>
+		<p>copyright &#x000A9; 2001 by KOREA INSTITUTE of CIVIL ENGINEERING and BUILDING TECHNOLOGY. All right reserved.<br />
+		‘건설기술정보시스템'은 국토교통부 『건설사업정보화사업』(2013∼)과 행정안전부(한국정보화진흥원)의 『국가DB사업』(2001∼2014)으로 구축·운영되고 있습니다.
+		</p>
+	</div>
+
+            
+        </footer><!-- end footer -->
+        
+    </div><!-- end wrap -->
+    
+    <!-- 로딩 DIV -->
+    <div id="mask"></div>
+    <iframe width=0 height=0 name="hiddenframe" style="display:none;"></iframe>
+
+</body>
+</html>

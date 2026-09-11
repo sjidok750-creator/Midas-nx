@@ -1,0 +1,36 @@
+# ── 과업 원자료(발주처 자료)·대용량 해석 결과는 올리지 않는다 ──
+# 준공도면 원본(DWG/DXF)과 ODA 변환 입력
+projects/*/dxf/
+projects/*/dxf_sub/
+projects/*/_oda_in/
+# NX 해석 결과 대용량 파일(모델 .mcb/.mct 백업, 영향선 .blk, 배치 .nfxp) — 결과 JSON·PNG·MCT 텍스트만 남긴다
+projects/*/runs/**/*.blk
+projects/*/runs/**/*.nfxp
+projects/*/runs/**/*.mcb
+projects/*/runs/**/*.bak
+projects/*/runs/**/*.out
+projects/*/runs/**/*.OUT
+projects/*/runs/**/*.pdf
+# 납품 보고서(hwpx/pdf/xlsx)는 과업 폴더·구글드라이브에 둔다
+projects/*/report/
+
+# ── 확장자 기준 전역 차단(어느 폴더에 있든): 도면 원본·NX 바이너리·한글/오피스 납품물 ──
+*.dwg
+*.dxf
+*.mcb
+*.nfxp
+*.blk
+*.hwpx
+*.hwp
+*.xlsx
+*.docx
+_이전세션_산출물_20260909/dxf_out/
+
+# ── 파이썬·편집기 ──
+__pycache__/
+*.pyc
+.venv/
+*.log
+Thumbs.db
+desktop.ini
+~$*

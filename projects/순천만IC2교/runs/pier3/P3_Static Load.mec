@@ -1,0 +1,567 @@
+﻿$$-------------------------------------------------------$$
+$$      midas Civil Data File
+$$-------------------------------------------------------$$
+
+$$-------------------------------------------------------$$
+$$      Set from Mesh Set
+$$-------------------------------------------------------$$
+
+$$ Element 
+SET 1 = 1 THRU 7
+
+$$-------------------------------------------------------$$
+$$      Set from Output Mesh Set
+$$-------------------------------------------------------$$
+SET 3 = 1 THRU 7
+
+$$-------------------------------------------------------$$
+$$      Direct Text Input for Case Control
+$$-------------------------------------------------------$$
+
+TITLE = Static Load
+SUBCASE 1
+  SOL 101
+  LABEL = DEAD
+  LOAD = 1
+  SPC = 1
+  GEOPARM = 1
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 1 (0 , 13)
+SUBCASE 2
+  SOL 101
+  LABEL = RD
+  LOAD = 5
+  SPC = 1
+  GEOPARM = 2
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 2 (0 , 14)
+SUBCASE 3
+  SOL 101
+  LABEL = RLmax
+  LOAD = 9
+  SPC = 1
+  GEOPARM = 3
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 3 (0 , 15)
+SUBCASE 4
+  SOL 101
+  LABEL = RLmin
+  LOAD = 13
+  SPC = 1
+  GEOPARM = 4
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 4 (0 , 16)
+SUBCASE 5
+  SOL 101
+  LABEL = RL_G1
+  LOAD = 17
+  SPC = 1
+  GEOPARM = 5
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 5 (0 , 17)
+SUBCASE 6
+  SOL 101
+  LABEL = RL_G2
+  LOAD = 21
+  SPC = 1
+  GEOPARM = 6
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 6 (0 , 18)
+SUBCASE 7
+  SOL 101
+  LABEL = W
+  LOAD = 25
+  SPC = 1
+  GEOPARM = 7
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 7 (0 , 19)
+SUBCASE 8
+  SOL 101
+  LABEL = WL
+  LOAD = 29
+  SPC = 1
+  GEOPARM = 8
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 8 (0 , 20)
+SUBCASE 9
+  SOL 101
+  LABEL = CF
+  LOAD = 33
+  SPC = 1
+  GEOPARM = 9
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 9 (0 , 21)
+SUBCASE 10
+  SOL 101
+  LABEL = LF
+  LOAD = 37
+  SPC = 1
+  GEOPARM = 10
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 10 (0 , 22)
+SUBCASE 11
+  SOL 101
+  LABEL = TP
+  SPC = 1
+  GEOPARM = 11
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 11 (0 , 23)
+SUBCASE 12
+  SOL 101
+  LABEL = FR
+  SPC = 1
+  GEOPARM = 12
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = ALL
+  VBARSEGFORCE(PLOT, CORNER) = ALL
+  STRESS(PLOT, CORNER) = ALL
+  VBARMULTISTRESS(PLOT, CORNER) = ALL
+  BSTGP(PLOT) = ALL
+  LINELOAD(PLOT) = ALL
+  USE(INITLOAD) = 12 (0 , 24)
+
+$$-------------------------------------------------------$$
+$$      Direct Text Input for Bulk Data
+$$-------------------------------------------------------$$
+BEGIN BULK
+$$ Parameters of Equation Solver
+PARAM, UNITS, M-N-J-SEC
+$$ Parameters of Element Setting
+PARAM, QUAD4STRUC, HYB
+PARAM, ADJUSTELEMSHAPE, ON
+PARAM, OUTPUTPLASTICTYPE, 1
+PARAM, WARNAUTOSPC, ON
+PARAM, DUPCNSTRERROR, OFF
+PARAM, SOLUTIONERROR, ON
+PARAM, FACTMINTOL,            1e-13
+PARAM, FACTDIAG,            1e-10
+PARAM, PRTCONTACTWARN, OFF
+PARAM, CEPELAS, 1.0e-8 
+PARAM, AUTOSPC, OFF
+PARAM, SELF2MASS, ON 
+PARAM, MASSDOF, OFF 
+PARAM, RESVDAMP, OFF
+PARAM, SHELLFOLDANGL, 0.0 
+PARAM, INENCODING, UTF-8
+PARAM, OUTENCODING, UTF-8
+PARAM, GBLTEMPD,               0.
+PARAM, SPCLOCALGLOBALALL, ON 
+PARAM, TENDONAREAEFFECT, ALL 
+PARAM, TENDONELASTICLOSS, OFF 
+PARAM, TENDONRELAXLOSS, OFF 
+PARAM, TENDONCRSHLOSS, OFF 
+PARAM, LINELENGTHRATIO, ON 
+PARAM, USETAPERBAREFFMASS, ON 
+PARAM, USEBARCOUPMASSINERTIA, OFF 
+PARAM, FESSHELL, ON 
+PARAM, FESSOLID, ON 
+PARAM, SPRING2SPCF, OFF 
+PARAM, DVALOCALGLOBALALL, ON 
+PARAM, BUFFERBINARYTYPE, MEM 
+PARAM, IOBUFFERSIZE, -1 
+PARAM, NOEQNODALFORPRESSURE, ALL 
+$$ Parameters of Analysis Case
+PARAM, BARSHEARSTR, MAX
+PARAM, BARCDEFSTR, COMBBENDING
+PARAM, BARENDCFMTOL, 1.E-10
+PARAM, SCALINGOUTPUTBAR, ON 
+PARAM, ELEMRSLTCORD, MATERIAL
+PARAM, OUTPUTSHELLTYPE, 0
+PARAM, OUTPUTPLANETYPE, 1
+PARAM, OUTINITSTEP, OFF
+PARAM, STRESSERROR, OFF 
+PARAM, BAROUTSEGMENT, 4 
+PARAM, RELRESULTNODE, -1
+PARAM, LAYERBARTHERMAL, ON 
+PARAM, SLAVE2MASTER, ON 
+PARAM, OFFSETTOLERANCE, 1.e-3 
+PARAM, LUMPMASSMETHOD, ROWSUM
+PARAM, INTERMEDIATECASEBLOCK, ON
+PARAM, CASEBLOCK, ON
+PARAM, MINMAXBLOCKINFO, YES
+PARAM, ALLELEMLIST, ON
+PARAM, NLSEQUENTIAL, ON
+PARAM, MANUALSUBCASETEMPCTRL, ON
+PARAM, INITIALFORCE2SPCF, OFF
+PARAM, STRUCTURALSPCMERGE, ON
+PARAM, MERGEINITIALCONDITION, YES
+PARAM, BEAMREBARSTIFFNESS, YES
+PARAM, LIMITMOTIONELAS, YES
+PARAM, USEPLANEFESFORMULA, YES
+PARAM, HINGEELAS, 2.e-5
+PARAM, AXISY4STRUC, FUL
+PARAM, INTERMEDIATECONV, U
+PARAM, ASSUMEDPRESS, OFF
+PARAM, TRANSPOSEBINOUTPUT, YES
+PARAM, INTERMEDIATEDUMMYSPRING, YES
+PARAM, SEPRATIONTENSCOMPTOTAL, YES
+PARAM, USEFESEQTRUSS, NO 
+PARAM, K6ROTDIAGMINBYMEMBRANE, YES 
+PARAM, USEMPCEVECTORINDEPENDENTDOFIDS, YES 
+GEOPARM, 1, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 2, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 3, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 4, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 5, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 6, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 7, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 8, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 9, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 10, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 11, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 12, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+WRALINK, 13, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_DEAD.rst
+WRALINK, 14, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_RD.rst
+WRALINK, 15, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_RLmax.rst
+WRALINK, 16, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_RLmin.rst
+WRALINK, 17, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_RL_G1.rst
+WRALINK, 18, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_RL_G2.rst
+WRALINK, 19, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_W.rst
+WRALINK, 20, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_WL.rst
+WRALINK, 21, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_CF.rst
+WRALINK, 22, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_LF.rst
+WRALINK, 23, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_TP.rst
+WRALINK, 24, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\pier3\P3_ST_FR.rst
+NAMEMAP, 9, LD[CF], , , , , , 
+       , 1, LD[DEAD], , , , , , 
+       , 2, LD[RD], , , , , , 
+       , 3, LD[RLmax], , , , , , 
+       , 4, LD[RLmin], , , , , , 
+       , 5, LD[RL_G1], , , , , , 
+       , 6, LD[RL_G2], , , , , , 
+       , 7, LD[W], , , , , , 
+       , 8, LD[WL], , , , , , 
+       , 10, LD[LF], , , , , , 
+       , 11, LD[TP], , , , , , 
+       , 12, LD[FR], , , , , , 
+
+$$-------------------------------------------------------$$
+$$      Coordinate
+$$-------------------------------------------------------$$
+CORD2R , 1, , 0.0, 0.0, 0.0, 0.0, 0.0, 1.0
+       , 1.0, 0.0, 0.0, , , , , 
+
+$$-------------------------------------------------------$$
+$$      Function
+$$-------------------------------------------------------$$
+
+$$-------------------------------------------------------$$
+$$      Material Data
+$$-------------------------------------------------------$$
+MAT1   , 1,     24800000000., ,              0.2, 2498.47032429125,            1e-05, 0.0, 0.0
+       , 0.0, 0.0, 0.0, 0.0, , , , 
+MAT4   , 1,               0.,               0., 2498.47032429125, , 0.0, 1.0, 
+MAT1   , 2,     24800000000., ,              0.2, 1714.68261017281,            1e-05, 0.0, 0.0
+       , 0.0, 0.0, 0.0, 0.0, , , , 
+MAT4   , 2,               0.,               0., 1714.68261017281, , 0.0, 1.0, 
+MAT1   , 3,    248000000000., ,              0.2,               0.,            1e-05, 0.0, 0.0
+       , 0.0, 0.0, 0.0, 0.0, , , , 
+MAT4   , 3,               0.,               0.,               0., , 0.0, 1.0, 
+MAT1   , 4,    200000000000., ,              0.3, 7850.52034468693, 0.0, 0.0, 0.0
+       , 0.0, 0.0, 0.0, 0.0, , 0.0, 0.0, 0.0
+MAT4   , 4, 0.0, 0.0, 7850.52034468693, , 0.0, 1.0, 
+
+$$-------------------------------------------------------$$
+$$      Property Data
+$$-------------------------------------------------------$$
+PBAR   , 1, 1,              7.5,            5.625,          3.90625, 7.75154019579475, ,              7.5
+       ,             -1.5,             1.25,              1.5,             1.25,              1.5,            -1.25,             -1.5,            -1.25
+       , 0.83333333333333, 0.83333333333333, , ,              0.2, , ,              0.2
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,              1.5, 0.0,             -1.5, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBART  , 2, 2, 3, 4, P1, P1, , 
+       , , , , , , , , 
+PBAR   , 3, 2,              7.5,            5.625,          3.90625, 7.75154019579475, ,              7.5
+       ,             -1.5,             1.25,              1.5,             1.25,              1.5,            -1.25,             -1.5,            -1.25
+       , 0.83333333333333, 0.83333333333333, , ,              0.2, , ,              0.2
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,              1.5, 0.0,             -1.5, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBAR   , 4, 2,           11.875, 22.3274739583333, 6.18489583333333, 16.5889129454066, ,           11.875
+       ,           -2.375,             1.25,            2.375,             1.25,            2.375,            -1.25,           -2.375,            -1.25
+       , 0.83333333333333, 0.83333333333333, , , 0.12631578947368, , , 0.12631578947368
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,            2.375, 0.0,           -2.375, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBART  , 5, 2, 6, 7, P1, P1, , 
+       , , , , , , , , 
+PBAR   , 6, 2,           11.875, 22.3274739583333, 6.18489583333333, 16.5889129454066, ,           11.875
+       ,           -2.375,             1.25,            2.375,             1.25,            2.375,            -1.25,           -2.375,            -1.25
+       , 0.83333333333333, 0.83333333333333, , , 0.12631578947368, , , 0.12631578947368
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,            2.375, 0.0,           -2.375, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBAR   , 7, 2,            16.25, 57.2135416666667, 8.46354166666667, 25.6660007400097, ,            16.25
+       ,            -3.25,             1.25,             3.25,             1.25,             3.25,            -1.25,            -3.25,            -1.25
+       , 0.83333333333333, 0.83333333333333, , , 0.09230769230769, , , 0.09230769230769
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,             3.25, 0.0,            -3.25, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBAR   , 8, 2,            16.25, 57.2135416666667, 8.46354166666667, 25.6660007400097, ,            16.25
+       ,            -3.25,             1.25,             3.25,             1.25,             3.25,            -1.25,            -3.25,            -1.25
+       , 0.83333333333333, 0.83333333333333, , , 0.09230769230769, , , 0.09230769230769
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,             3.25, 0.0,            -3.25, 0.0, 0.0,             1.25, 0.0,            -1.25
+PBAR   , 9, 3,               4., 0.85333333333333, 2.08333333333333, 2.05631878681941, ,               4.
+       ,             -0.8,             1.25,              0.8,             1.25,              0.8,            -1.25,             -0.8,            -1.25
+       , 0.83333333333333, 0.83333333333333, , ,            0.375, , ,            0.375
+       , , , , , 0.0, 0.0, , YES
+       , , , , , , , , 
+       ,              0.8, 0.0,             -0.8, 0.0, 0.0,             1.25, 0.0,            -1.25
+
+$$-------------------------------------------------------$$
+$$      Load Data
+$$-------------------------------------------------------$$
+GRAV   , 49, 1,               1.,               0.,               0.,           -9.806, , OFF
+       , , , , , , , , NO
+FORCE  , 50, 8, 0, 1.0,               0.,               0.,        -1005900., 
+FORCE  , 50, 7, 0, 1.0,               0.,               0.,        -1114100., 
+FORCE  , 51, 7, 0, 1.0,               0.,         -337300.,               0., 
+MOMENT , 51, 7, 0, 1.0,         -661108.,               0.,               0., 
+FORCE  , 51, 8, 0, 1.0,               0.,         -337300.,               0., 
+MOMENT , 51, 8, 0, 1.0,         -661108.,               0.,               0., 
+PLOAD1 , 51, 2, GFVEC, FR,               0.,           -7500.,               1.,           -7500.
+       ,               0.,               1.,               0., , , , , NO
+PLOAD1 , 51, 1, GFVEC, FR,               0.,           -7500.,               1.,           -7500.
+       ,               0.,               1.,               0., , , , , NO
+PLOAD1 , 51, 5, GFVEC, FR,               0.,           -7500.,               1.,           -7500.
+       ,               0.,               1.,               0., , , , , NO
+PLOAD1 , 51, 4, GFVEC, FR,               0.,           -7500.,               1.,           -7500.
+       ,               0.,               1.,               0., , , , , NO
+PLOAD1 , 51, 3, GFVEC, FR,               0.,           -7500.,               1.,           -7500.
+       ,               0.,               1.,               0., , , , , NO
+FORCE  , 52, 7, 0, 1.0,         -171200.,               0.,               0., 
+MOMENT , 52, 7, 0, 1.0,               0.,          753280.,               0., 
+FORCE  , 52, 8, 0, 1.0,         -171200.,               0.,               0., 
+MOMENT , 52, 8, 0, 1.0,               0.,          753280.,               0., 
+FORCE  , 53, 7, 0, 1.0,               0.,               0.,          150400., 
+FORCE  , 53, 8, 0, 1.0,               0.,               0.,          117000., 
+FORCE  , 54, 7, 0, 1.0,               0.,          -46850.,               0., 
+MOMENT , 54, 7, 0, 1.0,         -206140.,               0.,               0., 
+FORCE  , 54, 8, 0, 1.0,               0.,          -46850.,               0., 
+MOMENT , 54, 8, 0, 1.0,         -206140.,               0.,               0., 
+FORCE  , 55, 7, 0, 1.0,               0.,               0.,        -4577200., 
+FORCE  , 55, 8, 0, 1.0,               0.,               0.,        -4149900., 
+FORCE  , 56, 7, 0, 1.0,               0.,               0.,        -1000700., 
+FORCE  , 56, 8, 0, 1.0,               0.,               0.,          -61100., 
+FORCE  , 57, 7, 0, 1.0,               0.,               0.,         -113500., 
+FORCE  , 57, 8, 0, 1.0,               0.,               0.,         -944800., 
+FORCE  , 58, 7, 0, 1.0,               0.,          -26100.,               0., 
+MOMENT , 58, 7, 0, 1.0,         -114840.,               0.,               0., 
+FORCE  , 58, 8, 0, 1.0,               0.,          -26100.,               0., 
+MOMENT , 58, 8, 0, 1.0,         -114840.,               0.,               0., 
+
+$$-------------------------------------------------------$$
+$$      Load Set
+$$-------------------------------------------------------$$
+LOAD   , 1,               1.,               1., 49, , , , 
+LOAD   , 5,               1.,               1., 55, , , , 
+LOAD   , 9,               1.,               1., 50, , , , 
+LOAD   , 13,               1.,               1., 53, , , , 
+LOAD   , 17,               1.,               1., 56, , , , 
+LOAD   , 21,               1.,               1., 57, , , , 
+LOAD   , 25,               1.,               1., 51, , , , 
+LOAD   , 29,               1.,               1., 54, , , , 
+LOAD   , 33,               1.,               1., 58, , , , 
+LOAD   , 37,               1.,               1., 52, , , , 
+
+$$-------------------------------------------------------$$
+$$      Boundary Condition
+$$-------------------------------------------------------$$
+SPC1   , 64, 123456, 1, , , , , 
+SPCADD , 1, 64, , , , , , 
+
+$$-------------------------------------------------------$$
+$$      Node
+$$-------------------------------------------------------$$
+GRID   , 1, , 0.0, 0.0, 0.0, 0, , 
+GRID   , 2, , 0.0, 0.0,              7.5, 0, , 
+GRID   , 3, , 0.0, 0.0,              15., 0, , 
+GRID   , 4, , 0.0, 0.0,             17.5, 0, , 
+GRID   , 5, , 0.0, 0.0,              20., 0, , 
+GRID   , 6, , 0.0, 0.0,           21.086, 0, , 
+GRID   , 7, , 0.0,            2.135,           21.086, 0, , 
+GRID   , 8, , 0.0,           -2.135,           21.086, 0, , 
+
+$$-------------------------------------------------------$$
+$$      Element
+$$-------------------------------------------------------$$
+CBAR   , 1, 1, 1, 2,               0.,              -1.,               0., 
+       , , ,               0.,               0.,               0.,               0.,               0.,               0.
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 2, 1, 2, 3,               0.,              -1.,               0., 
+       , , ,               0.,               0.,               0.,               0.,               0.,               0.
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 3, 2, 3, 4,               0.,              -1.,               0., 
+       , , ,               0.,               0.,               0.,               0.,               0.,               0.
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 4, 5, 4, 5,               0.,              -1.,               0., 
+       , , ,               0.,               0.,               0.,               0.,               0.,               0.
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 5, 8, 5, 6,               0.,              -1.,               0., 
+       , , ,               0.,               0.,               0.,               0.,               0.,               0.
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 6, 9, 6, 7,              -1.,               0.,               0., 
+       , , ,               0.,               0.,            -1.25,               0.,               0.,            -1.25
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+CBAR   , 7, 9, 6, 8,               1.,               0.,              -0., 
+       , , ,               0.,               0.,            -1.25,               0.,               0.,            -1.25
+       , , , , , , , , NO
+       , , , , , , , , NO
+       , , , , , , , , 
+       , , , , , , , , 
+       , , , , , , , , 
+
+ENDDATA

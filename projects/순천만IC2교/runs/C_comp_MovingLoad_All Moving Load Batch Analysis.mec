@@ -1,0 +1,158 @@
+﻿$$-------------------------------------------------------$$
+$$      midas Civil Data File
+$$-------------------------------------------------------$$
+
+$$-------------------------------------------------------$$
+$$      Set from Mesh Set
+$$-------------------------------------------------------$$
+
+$$ Element 
+SET 1 = 1 THRU 393
+
+$$-------------------------------------------------------$$
+$$      Set from Output Mesh Set
+$$-------------------------------------------------------$$
+SET 3 = 1 THRU 393
+
+$$-------------------------------------------------------$$
+$$      Direct Text Input for Case Control
+$$-------------------------------------------------------$$
+
+TITLE = MovingLoad_All Moving Load Batch Analysis
+SUBCASE 17
+  SOL 101
+  LABEL = Influence(All Moving Load Batch Analysis)
+  SPC = 1
+  GEOPARM = 17
+LINEARCOM 18
+  SOL 2013
+  LABEL = MovingInfluence(All Moving Load Batch Analysis)
+  SPC = 1
+  GEOPARM = 18
+  COMBINATIONPARAM = 18
+  COMBINATIONCASES = 17
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCES(PLOT) = ALL
+  FORCE(PLOT, CORNER) = 3
+  VBARSEGFORCE(PLOT, CORNER) = 3
+  STRESS(PLOT, CORNER) = 3
+  VBARMULTISTRESS(PLOT, CORNER) = 3
+  CONFORCE(PLOT, CORNER) = 3
+  USE(MOVINGSPCINFO) = 18 (26, 0)
+
+$$-------------------------------------------------------$$
+$$      Direct Text Input for Bulk Data
+$$-------------------------------------------------------$$
+BEGIN BULK
+$$ Parameters of Equation Solver
+PARAM, UNITS, M-N-J-SEC
+$$ Parameters of Element Setting
+PARAM, QUAD4STRUC, HYB
+PARAM, ADJUSTELEMSHAPE, ON
+PARAM, OUTPUTPLASTICTYPE, 1
+PARAM, WARNAUTOSPC, ON
+PARAM, DUPCNSTRERROR, OFF
+PARAM, SOLUTIONERROR, ON
+PARAM, FACTMINTOL,            1e-13
+PARAM, FACTDIAG,            1e-10
+PARAM, PRTCONTACTWARN, OFF
+PARAM, CEPELAS, 1.0e-8 
+PARAM, AUTOSPC, OFF
+PARAM, SELF2MASS, ON 
+PARAM, MASSDOF, OFF 
+PARAM, RESVDAMP, OFF
+PARAM, SHELLFOLDANGL, 0.0 
+PARAM, INENCODING, UTF-8
+PARAM, OUTENCODING, UTF-8
+PARAM, GBLTEMPD,               0.
+PARAM, SPCLOCALGLOBALALL, ON 
+PARAM, TENDONAREAEFFECT, ALL 
+PARAM, TENDONELASTICLOSS, OFF 
+PARAM, TENDONRELAXLOSS, OFF 
+PARAM, TENDONCRSHLOSS, OFF 
+PARAM, LINELENGTHRATIO, ON 
+PARAM, USEBARCOUPMASSINERTIA, OFF 
+PARAM, FESSHELL, ON 
+PARAM, FESSOLID, ON 
+PARAM, SPRING2SPCF, OFF 
+PARAM, DVALOCALGLOBALALL, ON 
+PARAM, BUFFERBINARYTYPE, MEM 
+PARAM, IOBUFFERSIZE, -1 
+PARAM, NOEQNODALFORPRESSURE, ALL 
+$$ Parameters of Analysis Case
+PARAM, BARSHEARSTR, MAX
+PARAM, BARCDEFSTR, COMBBENDING
+PARAM, SCALINGOUTPUTBAR, ON 
+PARAM, ELEMRSLTCORD, MATERIAL
+PARAM, OUTPUTSHELLTYPE, 0
+PARAM, OUTPUTPLANETYPE, 1
+PARAM, OUTINITSTEP, OFF
+PARAM, STRESSERROR, OFF 
+PARAM, BAROUTSEGMENT, 4 
+PARAM, RELRESULTNODE, -1
+PARAM, LAYERBARTHERMAL, ON 
+PARAM, SLAVE2MASTER, ON 
+PARAM, OFFSETTOLERANCE, 1.e-3 
+PARAM, LUMPMASSMETHOD, ROWSUM
+PARAM, INTERMEDIATECASEBLOCK, ON
+PARAM, CASEBLOCK, ON
+PARAM, MINMAXBLOCKINFO, YES
+PARAM, ALLELEMLIST, ON
+PARAM, MANUALSUBCASETEMPCTRL, ON
+PARAM, INITIALFORCE2SPCF, OFF
+PARAM, STRUCTURALSPCMERGE, ON
+PARAM, MERGEINITIALCONDITION, YES
+PARAM, BEAMREBARSTIFFNESS, YES
+PARAM, LIMITMOTIONELAS, YES
+PARAM, USEPLANEFESFORMULA, YES
+PARAM, HINGEELAS, 2.e-5
+PARAM, AXISY4STRUC, FUL
+PARAM, INTERMEDIATECONV, U
+PARAM, ASSUMEDPRESS, OFF
+PARAM, TRANSPOSEBINOUTPUT, YES
+PARAM, INTERMEDIATEDUMMYSPRING, YES
+PARAM, SEPRATIONTENSCOMPTOTAL, YES
+PARAM, USEFESEQTRUSS, NO 
+PARAM, K6ROTDIAGMINBYMEMBRANE, YES 
+PARAM, USEMPCEVECTORINDEPENDENTDOFIDS, YES 
+CMBPARM, 18, MOVING, , , ENV, 6, NO, 
+       , 6, , , , , , , 
+       , DB-24, 19, 0, , , , , 
+       , DL-24, 20, 1, , , , , 
+       , DB-24_L1, 21, 2, , , , , 
+       , DB-24_L2, 22, 3, , , , , 
+       , DL-24_L1, 23, 4, , , , , 
+       , DL-24_L2, 24, 5, , , , , 
+GEOPARM, 17, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+GEOPARM, 18, Z,            9.806, , 1000, , , 
+       , , , YES, , , , , 
+       , , , NO, , , , , 
+       ,              0.6,           4181.3,             2.22,          334000.,           293.15, , NO, 
+RDALINK, 26, , , , , , , 
+       , D:\Midas\projects\순천만IC2교\runs\C_comp_MovingInfo.rst
+NAMEMAP, 17, LD[Influence(All Moving Load Batch Analysis)], , , , , , 
+       , 18, LD[MovingInfluence(All Moving Load Batch Analysis)], , , , , , 
+       , 19, MV[DB-24], , , , , , 
+       , 20, MV[DL-24], , , , , , 
+       , 21, MV[DB-24_L1], , , , , , 
+       , 22, MV[DB-24_L2], , , , , , 
+       , 23, MV[DL-24_L1], , , , , , 
+       , 24, MV[DL-24_L2], , , , , , 
+
+$$-------------------------------------------------------$$
+$$      Load Data
+$$-------------------------------------------------------$$
+
+$$-------------------------------------------------------$$
+$$      Load Set
+$$-------------------------------------------------------$$
+
+$$-------------------------------------------------------$$
+$$      Include file
+$$-------------------------------------------------------$$
+INCLUDE, D:\Midas\projects\순천만IC2교\runs\C_comp_MovingLoad_Include.mebp 
+
+ENDDATA
