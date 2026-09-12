@@ -7,3 +7,4 @@
 - [HWPX 편집 지침 위치](hwpx-guideline-pointer.md) — 구글드라이브 v2(1STMagrUVA2xl0dI1xyngFGR0067JqS-b)·v3.1·v3.2·v3.3 증보분. 원본 XML 복제·수정, 검증 필수. 도구 D:\Midas\tools\hwpx_edit.py
 - [설계기준 원문 위치](bridge-design-code-refs.md) — 도로교설계기준 2005 PDF·2016 실무요령·2020 도로설계요령 조항(하중조합 ①~⑨, R, kh). D:\Midas\references
 - [진단 보고서 원칙](diagnosis-report-principles.md) — LSD 없음, 2010 강도/허용응력+최신규정, DB-24, 지진 제외, 제외 범위, 편람 흐름
+- [GitHub 레포 Midas-nx](github-repo-midas-nx.md) — 코드는 sjidok750-creator/Midas-nx(루트 D:\Midas). 도면·NX 바이너리·납품물 금지, 변경은 커밋으로
