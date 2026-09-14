@@ -24,6 +24,7 @@ projects/*/report/
 *.hwp
 *.xlsx
 *.docx
+*.bak
 _이전세션_산출물_20260909/dxf_out/
 
 # ── 파이썬·편집기 ──
