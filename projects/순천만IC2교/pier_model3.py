@@ -9,7 +9,7 @@
 """
 import sys, os, json, math
 sys.stdout.reconfigure(encoding="utf-8")
-PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ); sys.path.insert(0, r"D:\Midas\tools")
+PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ); sys.path.insert(0, r"D:\Midas\core\tools")
 import pier_model as PM
 from pier_model import SUB, RX, CB, GC, EC, FCK, FY, MU, P_WIND, H_W, H_WL, pier_geom, taper_area, build_mct, pier_weights, parse, rc_column_capacity, pm_ratio, autocrop
 RUNS = PM.RUNS; OUT = os.path.join(RUNS, "pier3"); os.makedirs(OUT, exist_ok=True); PM.OUT = OUT

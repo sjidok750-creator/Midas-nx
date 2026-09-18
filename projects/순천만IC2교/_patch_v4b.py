@@ -7,7 +7,7 @@
   3. '나. 구조검토 조건', '5.2.4 … 결과 요약' 앞의 강제 쪽나눔 제거(앞 쪽이 1/4만 차고 넘어가던 원인)
 사용: python _patch_v4b.py  (report/5장_v4.hwpx 를 제자리에서 갱신)"""
 import sys, os
-sys.path.insert(0, r"D:\Midas\tools")
+sys.path.insert(0, r"D:\Midas\core\tools")
 from hwpx_edit import Hwpx, para_text, P
 
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report")

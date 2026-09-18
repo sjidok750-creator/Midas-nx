@@ -5,7 +5,7 @@ MCT 3종을 CIVIL NX API로 차례로: 새 문서 → 불러오기 → 되읽기
 """
 import sys, os, json, time
 sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools")
+sys.path.insert(0, r"D:\Midas\core\tools")
 from midas_api import Civil
 
 PJ = r"D:\Midas\projects\순천만IC2교"

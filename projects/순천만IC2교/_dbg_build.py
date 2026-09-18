@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys, os, json; sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools"); sys.path.insert(0, r"D:\Midas\projects\순천만IC2교")
+sys.path.insert(0, r"D:\Midas\core\tools"); sys.path.insert(0, r"D:\Midas\projects\순천만IC2교")
 from hwpx_edit import Hwpx, para_text, P
 import build_ch5 as B
 doc = Hwpx(os.path.join(B.REP, "원본_5장_초안.hwpx")).load()

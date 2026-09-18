@@ -2,13 +2,13 @@
 """
 제5장 v3 — v2(5장_v2.hwpx)에서 하부구조 절을 '도로설계요령 절차 + 한계상태설계법(KDS 24) 계수'로 교체, 교대 형상은 자동판독(abut_geom) 결과, 요령 그림 삽도 이식
   입력: report/5장_v2.hwpx, runs/abutment/A1_v2_result.json (abutment2.py), runs/pier_kds/P*_result.json (pier_model.py --code kds), runs/reactions_summary.json(편재 1차선 포함)
-        D:/Midas/references/요령1992_fig/crop/*.png (도로설계요령 그림 2.10·표 2.8·그림 3.3·3.40·5.4)
+        D:/Midas/core/references/요령1992_fig/crop/*.png (도로설계요령 그림 2.10·표 2.8·그림 3.3·3.40·5.4)
   출력: report/5장_v3.hwpx
   문단 인덱스: 5장_v2.hwpx 기준(하부구조 351~594, 요약 646~648, 결론 656~657, 참고문헌 25~33). 뒤쪽부터 편집하지 않고, 삽입은 마지막에 수행
 """
 import sys, os, json, copy, math
 sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
+sys.path.insert(0, r"D:\Midas\core\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
 from hwpx_edit import Hwpx, para_text, P
 from build_ch5 import cell, setc, table_of, caption_units, RUNS, REP
 from build_ch5_v2 import tcs, set_row, set_para, blank, f0, f1, f2, f3
@@ -17,7 +17,7 @@ PR = {n: json.load(open(os.path.join(RUNS, "pier_kds", f"{n}_result.json"), enco
 RX = json.load(open(os.path.join(RUNS, "reactions_summary.json"), encoding="utf-8"))["support"]
 K = json.load(open(os.path.join(PJ, "combos_kds.json"), encoding="utf-8"))
 SUB = json.load(open(os.path.join(PJ, "하부_제원서.json"), encoding="utf-8"))
-FIGD = r"D:\Midas\references\요령1992_fig\crop"
+FIGD = r"D:\Midas\core\references\요령1992_fig\crop"
 GOV = "P3"; p3 = PR[GOV]; g3 = p3["geom"]
 
 def load_png(path):

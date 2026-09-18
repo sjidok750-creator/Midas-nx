@@ -12,7 +12,7 @@
 import sys, os, json, math, time
 sys.stdout.reconfigure(encoding="utf-8")
 PJ = r"D:\Midas\projects\순천만IC2교"; RUNS = os.path.join(PJ, "runs"); OUT = os.path.join(RUNS, "pier"); os.makedirs(OUT, exist_ok=True)
-sys.path.insert(0, r"D:\Midas\tools"); sys.path.insert(0, PJ)
+sys.path.insert(0, r"D:\Midas\core\tools"); sys.path.insert(0, PJ)
 import mct_syntax as M
 SUB = json.load(open(os.path.join(PJ, "하부_제원서.json"), encoding="utf-8"))
 RX = json.load(open(os.path.join(RUNS, "reactions_summary.json"), encoding="utf-8"))["support"]

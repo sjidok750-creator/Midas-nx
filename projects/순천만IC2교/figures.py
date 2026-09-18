@@ -11,7 +11,7 @@
 import sys, os, json
 sys.stdout.reconfigure(encoding="utf-8")
 PJ = r"D:\Midas\projects\순천만IC2교"; RUNS = os.path.join(PJ, "runs"); FIG = os.path.join(RUNS, "fig")
-sys.path.insert(0, r"D:\Midas\tools"); sys.path.insert(0, PJ)
+sys.path.insert(0, r"D:\Midas\core\tools"); sys.path.insert(0, PJ)
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 plt.rcParams["font.family"] = ["Malgun Gothic"]; plt.rcParams["axes.unicode_minus"] = False
 import gen_model as G

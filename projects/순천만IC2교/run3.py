@@ -5,7 +5,7 @@ v3 실행: A_steel, C_comp — 새문서 → MCT → 되읽기 → 받침 국부
 결과: runs/<tag>_beamforce.json, _reaction.json, _disp.json (C: 이동하중 변위)
 """
 import sys, os, json, time
-sys.stdout.reconfigure(encoding="utf-8"); sys.path.insert(0, r"D:\Midas\tools")
+sys.stdout.reconfigure(encoding="utf-8"); sys.path.insert(0, r"D:\Midas\core\tools")
 from midas_api import Civil
 PJ = r"D:\Midas\projects\순천만IC2교"; RUNS = os.path.join(PJ, "runs")
 INFO = json.load(open(os.path.join(RUNS, "model_info.json"), encoding="utf-8"))

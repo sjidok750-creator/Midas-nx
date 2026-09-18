@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """모델 C(합성후 단기): MCT(v4, 이동하중 제외) 불러온 뒤 이동하중은 API JSON으로 정의 → 해석 → BEAMFORCE"""
-import sys, os, json, time; sys.stdout.reconfigure(encoding="utf-8"); sys.path.insert(0, r"D:\Midas\tools")
+import sys, os, json, time; sys.stdout.reconfigure(encoding="utf-8"); sys.path.insert(0, r"D:\Midas\core\tools")
 from midas_api import Civil
 R = r"D:\Midas\projects\순천만IC2교\runs"
 INFO = json.load(open(os.path.join(R, "model_info.json"), encoding="utf-8"))

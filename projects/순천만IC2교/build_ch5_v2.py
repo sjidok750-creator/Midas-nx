@@ -7,7 +7,7 @@
 """
 import sys, os, json, copy, math
 sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
+sys.path.insert(0, r"D:\Midas\core\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
 from hwpx_edit import Hwpx, para_text, P
 from build_ch5 import cell, setc, table_of, caption_units, load_fig, RUNS, REP
 A = json.load(open(os.path.join(RUNS, "abutment", "A1_result.json"), encoding="utf-8"))

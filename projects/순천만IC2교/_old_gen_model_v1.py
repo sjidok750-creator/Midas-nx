@@ -17,7 +17,7 @@
 """
 import sys, os, math, json
 sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools")
+sys.path.insert(0, r"D:\Midas\core\tools")
 
 PJ = r"D:\Midas\projects\순천만IC2교"
 OUT = os.path.join(PJ, "runs")

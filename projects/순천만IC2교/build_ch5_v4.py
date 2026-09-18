@@ -7,7 +7,7 @@
 """
 import sys, os, json, copy, glob
 sys.stdout.reconfigure(encoding="utf-8")
-sys.path.insert(0, r"D:\Midas\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
+sys.path.insert(0, r"D:\Midas\core\tools"); PJ = r"D:\Midas\projects\순천만IC2교"; sys.path.insert(0, PJ)
 from hwpx_edit import Hwpx, para_text, P
 from hwpx_table import new_table, new_para, insert_after, fix_layout, merge_cells
 from derive import abutment_lines, pier_lines
